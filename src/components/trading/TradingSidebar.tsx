@@ -87,7 +87,6 @@ export default function TradingSidebar({ locale }: TradingSidebarProps) {
           <SidebarItem
             key={item.href}
             icon={item.icon}
-            labelKey={item.labelKey}
             label={t(item.labelKey)}
             href={`/${locale}${item.href}`}
             isCollapsed={isCollapsed && !isMobile}
