@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 export default function CopyTradingPage() {
-  const t = useTranslations("CopyTrading");
+  const t = useTranslations("copytrading");
 
   const masterTraders = [
     { id: 1, name: "Alex Thompson", avatar: "AT", winRate: 87, roi: 145, followers: 1247, equity: "$125,000", drawdown: "12%", trades: 1523 },

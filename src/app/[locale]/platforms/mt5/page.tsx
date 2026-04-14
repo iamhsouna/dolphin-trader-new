@@ -9,7 +9,7 @@ import ComingSoonModal from "@/components/ComingSoonModal";
 import { useTranslations } from "next-intl";
 
 export default function MT5Page() {
-  const t = useTranslations("MT5");
+  const t = useTranslations("mt5");
   const [showModal, setShowModal] = useState(false);
 
   return (

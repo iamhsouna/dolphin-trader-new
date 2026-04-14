@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import Link from "next/link";
 
 export default function PartnerRegisterPage() {
-  const t = useTranslations("Partner");
+  const t = useTranslations("partner");
 
   return (
     <div className="min-h-screen pt-16 bg-background">

@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
 export default function DepositPage() {
-  const t = useTranslations("Dashboard");
+  const t = useTranslations("dashboard");
   const [amount, setAmount] = useState("");
   const [method, setMethod] = useState("card");
 

@@ -4,8 +4,8 @@ import ProductLayout from "../ProductLayout";
 import { useTranslations } from "next-intl";
 
 export default function SharesPage() {
-  const t = useTranslations("Products");
-  const tp = useTranslations("ProductLayout");
+  const t = useTranslations("products");
+  const tp = useTranslations("productlayout");
 
   const instruments = [
     { symbol: "AAPL", spread: t("fromPipsValue", { spread: "0.1" }), leverage: tp("upTo", { value: "20:1" }) },

@@ -13,7 +13,7 @@ export default function ComingSoonModal({
   isOpen,
   onClose,
 }: ComingSoonModalProps) {
-  const t = useTranslations("ComingSoon");
+  const t = useTranslations("comingsoon");
 
   if (!isOpen) return null;
 

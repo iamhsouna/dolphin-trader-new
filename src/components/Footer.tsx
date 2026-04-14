@@ -6,9 +6,9 @@ import { useTranslations } from "next-intl";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
-  const t = useTranslations("Footer");
-  const tn = useTranslations("Navigation");
-  const tp = useTranslations("PageNames");
+  const t = useTranslations("footer");
+  const tn = useTranslations("navigation");
+  const tp = useTranslations("pagenames");
 
   const footerLinks = {
     products: {

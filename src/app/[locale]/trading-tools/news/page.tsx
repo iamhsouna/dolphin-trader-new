@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 export default function MarketNewsPage() {
-  const t = useTranslations("TradingTools");
+  const t = useTranslations("tradingtools");
   const [showModal, setShowModal] = useState(true);
 
   const news = [

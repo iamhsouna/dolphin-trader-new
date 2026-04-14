@@ -5,7 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 export default function PrivacyPage() {
-  const t = useTranslations("Privacy");
+  const t = useTranslations("privacy");
 
   return (
     <div className="min-h-screen pt-16 bg-background">

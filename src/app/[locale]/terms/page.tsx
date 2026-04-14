@@ -5,7 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 export default function TermsPage() {
-  const t = useTranslations("Terms");
+  const t = useTranslations("terms");
 
   return (
     <div className="min-h-screen pt-16 bg-background">

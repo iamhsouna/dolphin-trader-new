@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 export default function TradingToolsPage() {
-  const t = useTranslations("TradingTools");
+  const t = useTranslations("tradingtools");
 
   const tools = [
     {

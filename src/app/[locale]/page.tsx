@@ -31,7 +31,7 @@ function PriceTicker({ prices }: { prices: PriceData[] }) {
 }
 
 function Hero({ openRegister, prices }: { openRegister: () => void; prices: PriceData[] }) {
-  const t = useTranslations("Hero");
+  const t = useTranslations("hero");
 
   return (
     <section className="relative min-h-[90vh] flex items-center pt-10 overflow-hidden">
@@ -156,7 +156,7 @@ function Hero({ openRegister, prices }: { openRegister: () => void; prices: Pric
 }
 
 function StatsSection() {
-  const t = useTranslations("Stats");
+  const t = useTranslations("stats");
   const statsData = [
     { value: "$2.5B+", label: t("monthlyVolume"), icon: "📊" },
     { value: "150K+", label: t("activeTraders"), icon: "👥" },
@@ -182,7 +182,7 @@ function StatsSection() {
 }
 
 function ProductsSection() {
-  const t = useTranslations("Products");
+  const t = useTranslations("products");
 
   const productsList = [
     { nameKey: "forex", icon: "💱", descKey: "forexDesc", spread: "0.0", link: "/products/forex", color: "from-[#5B31F5] to-[#7B57FF]" },
@@ -226,7 +226,7 @@ function ProductsSection() {
 }
 
 function PlatformsSection() {
-  const t = useTranslations("Platforms");
+  const t = useTranslations("platforms");
 
   return (
     <section id="platforms" className="py-24 bg-gradient-to-b from-primary/5 to-transparent">
@@ -302,8 +302,8 @@ function PlatformsSection() {
 }
 
 function AccountTypesSection({ openRegister }: { openRegister: () => void }) {
-  const t = useTranslations("Accounts");
-  const tf = useTranslations("Features");
+  const t = useTranslations("accounts");
+  const tf = useTranslations("features");
 
   return (
     <section id="accounts" className="py-24">
@@ -359,7 +359,7 @@ function AccountTypesSection({ openRegister }: { openRegister: () => void }) {
 }
 
 function FeaturesSection() {
-  const t = useTranslations("Features");
+  const t = useTranslations("features");
 
   return (
     <section className="py-24 bg-gradient-to-b from-primary/5 to-transparent">
@@ -387,7 +387,7 @@ function FeaturesSection() {
 }
 
 function CTASection({ openRegister }: { openRegister: () => void }) {
-  const t = useTranslations("CTA");
+  const t = useTranslations("cta");
 
   return (
     <section className="py-24 relative overflow-hidden">
@@ -424,7 +424,7 @@ function CTASection({ openRegister }: { openRegister: () => void }) {
 }
 
 function TestimonialsSection() {
-  const t = useTranslations("Testimonials");
+  const t = useTranslations("testimonials");
 
   return (
     <section className="py-24 bg-gradient-to-b from-transparent to-background/50">
@@ -479,7 +479,7 @@ function TestimonialsSection() {
 }
 
 function RegulationSection() {
-  const t = useTranslations("Regulation");
+  const t = useTranslations("regulation");
 
   return (
     <section className="py-16 border-t border-border/50">
@@ -506,7 +506,7 @@ function RegulationSection() {
 }
 
 function AnnouncementBar() {
-  const t = useTranslations("Announcement");
+  const t = useTranslations("announcement");
 
   return (
     <div className="relative z-40 bg-gradient-to-r from-primary/40 via-primary/30 to-primary/40 border-b border-primary/30 py-2.5">

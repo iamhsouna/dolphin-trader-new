@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export default function AboutPage() {
-  const t = useTranslations("About");
+  const t = useTranslations("about");
 
   const team = t.raw("teamMembers") as Array<{ name: string; role: string; avatar: string }>;
 

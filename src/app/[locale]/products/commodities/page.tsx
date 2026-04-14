@@ -4,8 +4,8 @@ import ProductLayout from "../ProductLayout";
 import { useTranslations } from "next-intl";
 
 export default function CommoditiesPage() {
-  const t = useTranslations("Products");
-  const tp = useTranslations("ProductLayout");
+  const t = useTranslations("products");
+  const tp = useTranslations("productlayout");
 
   const instruments = [
     { symbol: "USOIL", spread: t("fromPipsValue", { spread: "0.3" }), leverage: tp("upTo", { value: "100:1" }) },

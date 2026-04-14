@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 export default function ContactPage() {
-  const t = useTranslations("Contact");
+  const t = useTranslations("contact");
   const offices = t.raw("offices") as Array<{ city: string; email: string }>;
 
   const [formData, setFormData] = useState({

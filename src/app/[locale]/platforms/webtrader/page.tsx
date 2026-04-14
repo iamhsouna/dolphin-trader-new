@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export default function WebTraderPage() {
-  const t = useTranslations("WebTrader");
+  const t = useTranslations("webtrader");
 
   return (
     <div className="min-h-screen pt-16 bg-background">

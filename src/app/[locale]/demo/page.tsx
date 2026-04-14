@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 export default function DemoPage() {
-  const t = useTranslations("Demo");
+  const t = useTranslations("demo");
 
   const [formData, setFormData] = useState({
     firstName: "",

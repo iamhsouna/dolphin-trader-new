@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 export default function PartnerMaterialsPage() {
-  const t = useTranslations("Partner");
+  const t = useTranslations("partner");
 
   const materials = [
     { name: "Company Logo Pack", type: "ZIP", size: "2.4 MB" },

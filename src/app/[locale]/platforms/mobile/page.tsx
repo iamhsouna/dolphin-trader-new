@@ -8,7 +8,7 @@ import ComingSoonModal from "@/components/ComingSoonModal";
 import { useTranslations } from "next-intl";
 
 export default function MobilePage() {
-  const t = useTranslations("Mobile");
+  const t = useTranslations("mobile");
   const [showModal, setShowModal] = useState(false);
 
   return (

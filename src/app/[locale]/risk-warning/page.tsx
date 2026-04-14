@@ -5,7 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 export default function RiskWarningPage() {
-  const t = useTranslations("RiskWarning");
+  const t = useTranslations("riskwarning");
 
   return (
     <div className="min-h-screen pt-16 bg-background">

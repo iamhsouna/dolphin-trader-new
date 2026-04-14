@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { ChevronDown } from "lucide-react";
 
 export default function FAQPage() {
-  const t = useTranslations("FAQ");
+  const t = useTranslations("faq");
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const faqs = [

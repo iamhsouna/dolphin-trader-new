@@ -10,8 +10,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 export default function RegisterPage() {
-  const t = useTranslations("Auth");
-  const qa = useTranslations("QuickAccess");
+  const t = useTranslations("auth");
+  const qa = useTranslations("quickaccess");
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

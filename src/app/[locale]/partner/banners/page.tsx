@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 export default function PartnerBannersPage() {
-  const t = useTranslations("Partner");
+  const t = useTranslations("partner");
 
   const banners = [
     { name: "Leaderboard 728x90", size: "728x90", format: "GIF" },

@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 export default function PartnerEmailsPage() {
-  const t = useTranslations("Partner");
+  const t = useTranslations("partner");
 
   const templates = [
     { name: "Welcome Email", subject: "Welcome to Our Partner Program!", icon: "📧" },

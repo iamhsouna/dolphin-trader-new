@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 export default function PartnerReportsPage() {
-  const t = useTranslations("Partner");
+  const t = useTranslations("partner");
 
   const stats = [
     { label: t("totalCommissions"), value: "$12,450.00", change: "+12%" },

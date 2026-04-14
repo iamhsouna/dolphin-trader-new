@@ -13,7 +13,7 @@ interface Message {
 }
 
 export default function LiveChatWidget() {
-  const t = useTranslations("LiveChat");
+  const t = useTranslations("livechat");
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState("");
 

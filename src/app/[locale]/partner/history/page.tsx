@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 export default function PartnerHistoryPage() {
-  const t = useTranslations("Partner");
+  const t = useTranslations("partner");
 
   const commissions = [
     { date: "2024-01-15", trader: "John D.", volume: "$50,000", commission: "$125.00" },

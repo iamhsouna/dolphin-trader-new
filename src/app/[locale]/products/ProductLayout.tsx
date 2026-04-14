@@ -22,7 +22,7 @@ export default function ProductLayout({
   color,
   instruments,
 }: ProductLayoutProps) {
-  const t = useTranslations("ProductLayout");
+  const t = useTranslations("productlayout");
 
   return (
     <div className="min-h-screen pt-16 bg-background">

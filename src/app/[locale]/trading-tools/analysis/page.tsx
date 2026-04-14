@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 export default function TechnicalAnalysisPage() {
-  const t = useTranslations("TradingTools");
+  const t = useTranslations("tradingtools");
   const [showModal, setShowModal] = useState(true);
 
   const pairs = ["EUR/USD", "GBP/USD", "USD/JPY", "XAU/USD", "BTC/USD"];

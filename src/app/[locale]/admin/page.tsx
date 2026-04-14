@@ -5,7 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 export default function AdminPage() {
-  const t = useTranslations("Admin");
+  const t = useTranslations("admin");
 
   const stats = [
     { label: t("totalUsers"), value: "1,247", change: "+12%", icon: "👥" },

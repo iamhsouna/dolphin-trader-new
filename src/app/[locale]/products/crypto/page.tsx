@@ -4,8 +4,8 @@ import ProductLayout from "../ProductLayout";
 import { useTranslations } from "next-intl";
 
 export default function CryptoPage() {
-  const t = useTranslations("Products");
-  const tp = useTranslations("ProductLayout");
+  const t = useTranslations("products");
+  const tp = useTranslations("productlayout");
 
   const instruments = [
     { symbol: "BTC/USD", spread: t("fromPipsValue", { spread: "0.5" }), leverage: tp("upTo", { value: "5:1" }) },

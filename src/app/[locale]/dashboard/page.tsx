@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 export default function DashboardPage() {
-  const t = useTranslations("Dashboard");
+  const t = useTranslations("dashboard");
 
   const accounts = [
     { id: "MT5-001", type: "Standard", balance: 12500.00, equity: 12850.00, margin: 2500.00, leverage: "1:500" },

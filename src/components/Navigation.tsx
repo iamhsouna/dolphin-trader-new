@@ -10,7 +10,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import { ModeToggle } from "./ModeToggle";
 
 export default function Navigation() {
-  const t = useTranslations("Navigation");
+  const t = useTranslations("navigation");
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
