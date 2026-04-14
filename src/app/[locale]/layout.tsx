@@ -42,7 +42,7 @@ export default async function RootLayout({
   setRequestLocale(locale);
 
   const isArabic = locale === "ar";
-  const t = await getTranslations({ locale, namespace: "Metadata" });
+  const t = await getTranslations({ locale, namespace: "metadata" });
   return (
     <html lang={locale} dir={isArabic ? "rtl" : "ltr"} suppressHydrationWarning>
       <head>
@@ -99,7 +99,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "Metadata" });
+  const t = await getTranslations({ locale, namespace: "metadata" });
 
   return {
     title: t("title"),
