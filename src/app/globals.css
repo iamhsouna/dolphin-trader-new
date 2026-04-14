@@ -308,10 +308,31 @@
 }
 
 [dir="rtl"] .trading-layout {
-  grid-template-columns: var(--right-panel-width) 1fr var(--sidebar-width);
   grid-template-areas:
     "navbar navbar navbar"
     "rightpanel main sidebar";
+}
+
+@media (max-width: 1024px) {
+  .trading-layout {
+    grid-template-columns: var(--sidebar-collapsed-width) 1fr var(--right-panel-width);
+  }
+}
+
+@media (max-width: 768px) {
+  .trading-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "navbar"
+      "main";
+  }
+
+  [dir="rtl"] .trading-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "navbar"
+      "main";
+  }
 }
 
 /* Trading Navbar */
@@ -348,12 +369,14 @@
   align-items: center;
   gap: 24px;
   flex-shrink: 0;
+  direction: ltr;
 }
 
 .navbar-section-center {
   display: flex;
   align-items: center;
   gap: 4px;
+  direction: ltr;
 }
 
 .navbar-section-right {
@@ -361,6 +384,7 @@
   align-items: center;
   gap: 12px;
   flex-shrink: 0;
+  direction: ltr;
 }
 
 /* Brand Logo */
@@ -573,19 +597,17 @@
 
 /* Trading Sidebar */
 .trading-sidebar {
-  position: fixed;
-  top: var(--navbar-height);
-  inset-inline-start: 0;
-  width: var(--sidebar-width);
-  height: calc(100vh - var(--navbar-height));
+  grid-area: sidebar;
   background: var(--sidebar);
   border-inline-end: 1px solid var(--sidebar-border);
   display: flex;
   flex-direction: column;
-  transition: width var(--transition-duration) ease,
-              transform var(--transition-duration) ease;
-  z-index: 40;
+  transition: width var(--transition-duration) ease;
   overflow: hidden;
+  height: calc(100vh - var(--navbar-height));
+  position: sticky;
+  top: var(--navbar-height);
+  direction: ltr;
 }
 
 .trading-sidebar.is-collapsed {
@@ -707,6 +729,7 @@
   overflow-x: hidden;
   background: var(--background);
   min-height: calc(100vh - var(--navbar-height));
+  direction: ltr;
 }
 
 /* Right Panel - Watchlist */
@@ -721,6 +744,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  direction: ltr;
 }
 
 [dir="rtl"] .trading-rightpanel {
