@@ -40,5 +40,20 @@
   "GBPUSD": "جنيه/دولار",
   "USDJPY": "دولار/ين",
   "XAUUSD": "ذهب/دولار",
-  "BTCUSD": "بيتكوين/دولار"
+  "BTCUSD": "بيتكوين/دولار",
+  "welcomeMessage": "مرحباً بك في لوحة التداول",
+  "totalBalance": "الرصيد الإجمالي",
+  "openPositions": "المراكز المفتوحة",
+  "pendingOrders": "الطلبات المعلقة",
+  "todaysPL": "ربح/خسارة اليوم",
+  "marketOverview": "نظرة عامة على السوق",
+  "recentActivity": "النشاط الأخير",
+  "sinceUTC": "منذ 00:00 UTC",
+  "minAgo": "دقيقة",
+  "hourAgo": "ساعة",
+  "hoursAgo": "ساعات",
+  "buy": "شراء",
+  "sell": "بيع",
+  "totalPositions": "4 فوركس، 3 عملات رقمية",
+  "pendingTypes": "2 شراء، 1 بيع"
 }

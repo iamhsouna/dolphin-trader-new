@@ -40,5 +40,20 @@
   "GBPUSD": "GBP/USD",
   "USDJPY": "USD/JPY",
   "XAUUSD": "XAU/USD",
-  "BTCUSD": "BTC/USD"
+  "BTCUSD": "BTC/USD",
+  "welcomeMessage": "Welcome to your trading dashboard",
+  "totalBalance": "Total Balance",
+  "openPositions": "Open Positions",
+  "pendingOrders": "Pending Orders",
+  "todaysPL": "Today's P/L",
+  "marketOverview": "Market Overview",
+  "recentActivity": "Recent Activity",
+  "sinceUTC": "Since 00:00 UTC",
+  "minAgo": "min ago",
+  "hourAgo": "hour ago",
+  "hoursAgo": "hours ago",
+  "buy": "Buy",
+  "sell": "Sell",
+  "totalPositions": "4 forex, 3 crypto",
+  "pendingTypes": "2 buy, 1 sell"
 }

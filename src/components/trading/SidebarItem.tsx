@@ -51,11 +51,11 @@ export default function SidebarItem({
 }
 
 export const sidebarItems = [
-  { icon: LayoutDashboard, label: "Dashboard", href: "/dashboard" },
-  { icon: LineChart, label: "Live Charts", href: "/charts" },
-  { icon: Briefcase, label: "Portfolio", href: "/portfolio" },
-  { icon: ClipboardList, label: "Orders", href: "/orders" },
-  { icon: Eye, label: "Watchlist", href: "/watchlist" },
-  { icon: Newspaper, label: "News", href: "/news" },
-  { icon: Settings, label: "Settings", href: "/settings" },
+  { icon: LayoutDashboard, labelKey: "dashboard", href: "/dashboard" },
+  { icon: LineChart, labelKey: "liveCharts", href: "/charts" },
+  { icon: Briefcase, labelKey: "portfolio", href: "/portfolio" },
+  { icon: ClipboardList, labelKey: "orders", href: "/orders" },
+  { icon: Eye, labelKey: "watchlist", href: "/watchlist" },
+  { icon: Newspaper, labelKey: "news", href: "/news" },
+  { icon: Settings, labelKey: "settings", href: "/settings" },
 ];
