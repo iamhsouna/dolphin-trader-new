@@ -1,0 +1,23 @@
+{
+  "tradingPlatforms": "منصات التداول",
+  "metaTrader5": "ميتاتريدر 5",
+  "industryStandard": "المعيار الصناعي",
+  "metaTraderDesc": "أشهر منصة تداول في العالم، متاحة على سطح المكتب و iOS و Android مع جميع الميزات وتنفيذ سريع.",
+  "instantExecution": "تنفيذ فوري",
+  "instantExecutionDesc": "بدون أسعار إعادة، وصول مباشر للسوق",
+  "technicalIndicators": "المؤشرات الفنية",
+  "automatedTrading": "التداول الآلي",
+  "mobileTrading": "التداول عبر الهاتف",
+  "fullPower": "قوة كاملة في جيبك",
+  "launchWebTrader": "تشغيل ويب تريدر",
+  "downloadMT5": "تحميل MT5",
+  "platformGuide": "دليل المنصة",
+  "tradeAnywhere": "تداول في أي مكان",
+  "tradeAnywhereDesc": "الوصول إلى حسابك من أي جهاز، في أي مكان في العالم.",
+  "iosAppStore": "متجر iOS",
+  "googlePlay": "Google Play",
+  "windows": "ويندوز",
+  "download": "تحميل",
+  "connected": "متصل",
+  "liveAccount": "حساب حقيقي"
+}

@@ -1,0 +1,174 @@
+"use client";
+
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import Link from "next/link";
+import { useTranslations } from "next-intl";
+
+export default function DashboardPage() {
+  const t = useTranslations("Dashboard");
+
+  const accounts = [
+    { id: "MT5-001", type: "Standard", balance: 12500.00, equity: 12850.00, margin: 2500.00, leverage: "1:500" },
+    { id: "MT5-002", type: "ECN Pro", balance: 5000.00, equity: 4850.00, margin: 1000.00, leverage: "1:1000" },
+  ];
+
+  const recentTrades = [
+    { id: 1, symbol: "EUR/USD", type: "BUY", lots: 0.5, open: 1.0850, current: 1.0875, profit: 125.00 },
+    { id: 2, symbol: "XAU/USD", type: "SELL", lots: 0.2, open: 2030.00, current: 2025.00, profit: 100.00 },
+    { id: 3, symbol: "BTC/USD", type: "BUY", lots: 0.1, open: 67000.00, current: 67500.00, profit: 50.00 },
+  ];
+
+  return (
+    <div className="min-h-screen pt-16 bg-slate-950">
+      <Navigation />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+          <div>
+            <h1 className="text-3xl font-bold">{t("myDashboard")}</h1>
+            <p className="text-slate-400">Welcome back, John</p>
+          </div>
+          <div className="flex gap-3">
+            <Link href="/register" className="btn-secondary px-4 py-2">
+              + {t("createAccount")}
+            </Link>
+            <Link href="/deposit" className="btn-primary px-4 py-2">
+              {t("deposit")}
+            </Link>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-4 gap-6 mb-8">
+          {[
+            { label: t("totalBalance"), value: "$17,500.00", change: "+2.5%", icon: "💰", color: "from-cyan-500 to-blue-500" },
+            { label: t("equity"), value: "$17,700.00", change: "+3.2%", icon: "📊", color: "from-green-500 to-emerald-500" },
+            { label: t("availableMargin"), value: "$15,200.00", change: "-", icon: "📈", color: "from-purple-500 to-pink-500" },
+            { label: "Open Positions", value: "3", change: "-", icon: "🎯", color: "from-amber-500 to-orange-500" },
+          ].map((stat, i) => (
+            <div key={i} className="glass-card rounded-xl p-6">
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-3xl">{stat.icon}</span>
+                <span className={`text-sm font-medium ${stat.change.startsWith("+") ? "text-green-400" : stat.change === "-" ? "text-slate-400" : "text-red-400"}`}>
+                  {stat.change}
+                </span>
+              </div>
+              <div className="text-2xl font-bold mb-1">{stat.value}</div>
+              <div className="text-sm text-slate-400">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        <div className="grid lg:grid-cols-3 gap-8">
+          <div className="lg:col-span-2 space-y-8">
+            <div className="glass-card rounded-xl p-6">
+              <div className="flex justify-between items-center mb-6">
+                <h2 className="text-xl font-bold">{t("mt5Accounts")}</h2>
+                <Link href="/mt5-accounts" className="text-cyan-400 hover:underline text-sm">View All</Link>
+              </div>
+              <div className="space-y-4">
+                {accounts.map((account) => (
+                  <div key={account.id} className="bg-slate-800/50 rounded-xl p-4 flex items-center justify-between">
+                    <div>
+                      <div className="font-semibold">{account.id}</div>
+                      <div className="text-sm text-slate-400">{account.type} | {account.leverage}</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="font-bold text-lg">${account.balance.toLocaleString()}</div>
+                      <div className="text-sm text-slate-400">Equity: ${account.equity.toLocaleString()}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="glass-card rounded-xl p-6">
+              <div className="flex justify-between items-center mb-6">
+                <h2 className="text-xl font-bold">Recent Trades</h2>
+                <Link href="/history" className="text-cyan-400 hover:underline text-sm">View All</Link>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="text-left text-sm text-slate-400 border-b border-slate-700">
+                      <th className="pb-3">Symbol</th>
+                      <th className="pb-3">Type</th>
+                      <th className="pb-3">Lots</th>
+                      <th className="pb-3">Open</th>
+                      <th className="pb-3">Current</th>
+                      <th className="pb-3">Profit</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {recentTrades.map((trade) => (
+                      <tr key={trade.id} className="border-b border-slate-700/50">
+                        <td className="py-3 font-medium">{trade.symbol}</td>
+                        <td className={`py-3 ${trade.type === "BUY" ? "text-green-400" : "text-red-400"}`}>{trade.type}</td>
+                        <td className="py-3">{trade.lots}</td>
+                        <td className="py-3">{trade.open}</td>
+                        <td className="py-3">{trade.current}</td>
+                        <td className={`py-3 font-medium ${trade.profit >= 0 ? "text-green-400" : "text-red-400"}`}>
+                          {trade.profit >= 0 ? "+" : ""}${trade.profit.toFixed(2)}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div className="glass-card rounded-xl p-6">
+              <h2 className="text-xl font-bold mb-6">{t("wallet")}</h2>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center py-3 border-b border-slate-700/50">
+                  <span className="text-slate-400">USD Balance</span>
+                  <span className="font-bold">$17,500.00</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-slate-700/50">
+                  <span className="text-slate-400">Pending</span>
+                  <span className="font-bold text-amber-400">$0.00</span>
+                </div>
+                <div className="flex justify-between items-center py-3">
+                  <span className="text-slate-400">Total</span>
+                  <span className="font-bold text-lg">$17,500.00</span>
+                </div>
+              </div>
+              <div className="flex gap-3 mt-6">
+                <Link href="/deposit" className="flex-1 btn-primary text-center py-3">
+                  {t("deposit")}
+                </Link>
+                <Link href="/withdraw" className="flex-1 btn-secondary text-center py-3">
+                  {t("withdraw")}
+                </Link>
+              </div>
+            </div>
+
+            <div className="glass-card rounded-xl p-6">
+              <h2 className="text-xl font-bold mb-6">Quick Actions</h2>
+              <div className="space-y-3">
+                {[
+                  { icon: "📊", label: "Open New Trade", href: "/trading" },
+                  { icon: "📈", label: "Copy Trading", href: "/copy-trading" },
+                  { icon: "💱", label: "Deposit", href: "/deposit" },
+                  { icon: "💸", label: "Withdraw", href: "/withdraw" },
+                  { icon: "⚙️", label: "Settings", href: "/settings" },
+                ].map((action, i) => (
+                  <Link
+                    key={i}
+                    href={action.href}
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-800/50 transition-colors"
+                  >
+                    <span className="text-xl">{action.icon}</span>
+                    <span className="font-medium">{action.label}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
+}

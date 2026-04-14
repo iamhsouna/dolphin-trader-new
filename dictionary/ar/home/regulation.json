@@ -1,0 +1,10 @@
+{
+  "securityRegulation": "الأمان والتنظيم",
+  "fundsProtected": "أموالك محمية",
+  "regulatedByFSC": "خاضع لتنظيم FSC موريشيوس",
+  "regulatedByFSCDesc": "مرخص ومنظم من قبل لجنة الخدمات المالية في موريشيوس بموجب رقم الترخيص GB22200637.",
+  "segregatedAccounts": "حسابات منفصلة",
+  "segregatedAccountsDesc": "يتم الاحتفاظ بأموال العملاء في حسابات منفصلة عن أموال الشركة، مما يضمن أقصى حماية.",
+  "advancedSecurity": "أمان متقدم",
+  "advancedSecurityDesc": "تدابير أمان مصرفية بما في ذلك تشفير SSL 256 بت والمصادقة متعددة العوامل."
+}

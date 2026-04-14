@@ -9,6 +9,7 @@ import { WebSite } from "schema-dts";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import LiveChatWidget from "@/components/LiveChatWidget";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -22,7 +23,7 @@ const geistMono = Geist_Mono({
 });
 
 // Extract domain to a constant to avoid repetition
-const DOMAIN = "https://next-app-i18n-starter.vercel.app";
+const DOMAIN = "https://www.dolmarkets.com";
 
 export default async function RootLayout({
   children,
@@ -74,7 +75,10 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+          <NextIntlClientProvider>
+            {children}
+            <LiveChatWidget />
+          </NextIntlClientProvider>
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
@@ -83,7 +87,7 @@ export default async function RootLayout({
   );
 }
 
-const locales = ["en", "ar", "zh", "es", "ja"] as const;
+const locales = ["en", "ar"] as const;
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -108,7 +112,7 @@ export async function generateMetadata({
       title: t("title"),
       description: t("description"),
       url: DOMAIN,
-      siteName: "Next.js i18n Template",
+      siteName: "Dolphin Markets",
       images: [
         {
           url: `${DOMAIN}/og-image.png`,
@@ -125,17 +129,9 @@ export async function generateMetadata({
       title: t("title"),
       description: t("description"),
       images: [`${DOMAIN}/og-image.png`],
-      creator: "@s0ver5",
     },
     alternates: {
       canonical: DOMAIN,
-      languages: {
-        en: `${DOMAIN}/en`,
-        ar: `${DOMAIN}/ar`,
-        zh: `${DOMAIN}/zh`,
-        es: `${DOMAIN}/es`,
-        ja: `${DOMAIN}/ja`,
-      },
     },
     robots: {
       index: true,

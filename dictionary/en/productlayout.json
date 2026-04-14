@@ -1,0 +1,16 @@
+{
+  "tradingInstruments": "Trading Instruments",
+  "spread": "Spread",
+  "leverage": "Leverage",
+  "instantExecution": "Instant Execution",
+  "instantExecutionDesc": "Trade with sub-millisecond execution speed and no requotes.",
+  "secureTrading": "Secure Trading",
+  "secureTradingDesc": "Your funds are protected with bank-grade security measures.",
+  "realtimeQuotes": "Real-time Quotes",
+  "realtimeQuotesDesc": "Access live market data and competitive spreads 24/5.",
+  "readyToStart": "Ready to Start Trading?",
+  "openAccountDesc": "Open your account in minutes and start trading with tight spreads.",
+  "openLiveAccount": "Open Live Account",
+  "tryDemoFirst": "Try Demo First",
+  "upTo": "Up to {value}"
+}

@@ -1,0 +1,16 @@
+{
+  "tradingInstruments": "أدوات التداول",
+  "spread": "الفروق",
+  "leverage": "الرججية",
+  "instantExecution": "تنفيذ فوري",
+  "instantExecutionDesc": "تداول بسرعة تنفيذ أقل من ميلي ثانية وبدون أسعار إعادة.",
+  "secureTrading": "تداول آمن",
+  "secureTradingDesc": "أموالك محمية بتدابير أمان مصرفية.",
+  "realtimeQuotes": "عروض في الوقت الفعلي",
+  "realtimeQuotesDesc": "الوصول إلى بيانات السوق الحية وفروق تنافسية على مدار 24/5.",
+  "readyToStart": "مستعد لبدء التداول؟",
+  "openAccountDesc": "افتح حسابك في دقائق وابدأ التداول بفروق ضيقة.",
+  "openLiveAccount": "فتح حساب حقيقي",
+  "tryDemoFirst": "جرّب التداول التجريبي أولاً",
+  "upTo": "حتى {value}"
+}
