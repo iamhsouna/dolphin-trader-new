@@ -369,14 +369,12 @@
   align-items: center;
   gap: 24px;
   flex-shrink: 0;
-  direction: ltr;
 }
 
 .navbar-section-center {
   display: flex;
   align-items: center;
   gap: 4px;
-  direction: ltr;
 }
 
 .navbar-section-right {
@@ -384,7 +382,6 @@
   align-items: center;
   gap: 12px;
   flex-shrink: 0;
-  direction: ltr;
 }
 
 /* Brand Logo */

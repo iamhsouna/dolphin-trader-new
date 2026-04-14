@@ -120,17 +120,9 @@ export default function TradingSidebar({ locale }: TradingSidebarProps) {
                 onClick={closeMobile}
                 aria-hidden="true"
               />
-              <motion.div
-                initial={{ x: -280 }}
-                animate={{ x: 0 }}
-                exit={{ x: -280 }}
-                transition={{ duration: 0.25, ease: "easeInOut" }}
-                className="mobile-drawer"
-                role="dialog"
-                aria-label="Navigation menu"
-              >
+              <div className={isMobileOpen ? "mobile-drawer" : "mobile-drawer is-closed"} role="dialog" aria-label="Navigation menu">
                 {sidebarContent}
-              </motion.div>
+              </div>
             </>
           )}
         </AnimatePresence>
