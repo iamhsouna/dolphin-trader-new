@@ -26,17 +26,17 @@ export default function ComingSoonModal({
       <div className="relative glass-card rounded-2xl p-8 max-w-md mx-4 animate-fade-in">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 hover:bg-slate-700/50 rounded-lg transition-colors"
+          className="absolute top-4 right-4 p-2 hover:bg-secondary/50 rounded-lg transition-colors"
         >
-          <X className="w-5 h-5 text-slate-400" />
+          <X className="w-5 h-5 text-muted-foreground" />
         </button>
 
         <div className="text-center">
-          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center text-5xl mx-auto mb-6">
+          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/20 flex items-center justify-center text-5xl mx-auto mb-6">
             🚀
           </div>
           <h3 className="text-2xl font-bold mb-3">{t("title")}</h3>
-          <p className="text-slate-400 mb-6">{t("message")}</p>
+          <p className="text-muted-foreground mb-6">{t("message")}</p>
           <Button onClick={onClose} className="btn-primary px-8">
             {t("close")}
           </Button>

@@ -24,5 +24,21 @@
   "faq": "الأسئلة الشائعة",
   "partnership": "الشراكة",
   "brandName": "دولفين ماركتس",
-  "openNewTrade": "فتح صفقة جديدة"
+  "openNewTrade": "فتح صفقة جديدة",
+  "markets": "الأسواق",
+  "liveCharts": "الرسوم الحية",
+  "portfolio": "المحفظة",
+  "orders": "الطلبات",
+  "watchlist": "قائمة المراقبة",
+  "news": "الأخبار",
+  "settings": "الإعدادات",
+  "profile": "الملف الشخصي",
+  "logout": "تسجيل الخروج",
+  "openAccount": "فتح حساب",
+  "notifications": "الإشعارات",
+  "EURUSD": "يورو/دولار",
+  "GBPUSD": "جنيه/دولار",
+  "USDJPY": "دولار/ين",
+  "XAUUSD": "ذهب/دولار",
+  "BTCUSD": "بيتكوين/دولار"
 }

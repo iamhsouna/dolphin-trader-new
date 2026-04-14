@@ -48,9 +48,6 @@ const LanguageSwitcher = () => {
   const languageLabels = {
     en: "English",
     ar: "العربية",
-    zh: "中文",
-    es: "Español",
-    ja: "日本語",
   };
 
   return (
@@ -66,15 +63,6 @@ const LanguageSwitcher = () => {
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => changeLanguage("ar")}>
           العربية
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => changeLanguage("zh")}>
-          中文
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => changeLanguage("es")}>
-          Español
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => changeLanguage("ja")}>
-          日本語
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

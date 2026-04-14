@@ -23,5 +23,19 @@
   "withdrawToBank": "Withdraw to Bank Account",
   "date": "Date",
   "trader": "Trader",
-  "commission": "Commission"
+  "commission": "Commission",
+  "pending": "Pending",
+  "viewAll": "View All",
+  "available": "Available",
+  "referralDescription": "Share this link to earn commissions on every client that signs up through your referral.",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "email": "Email",
+  "phone": "Phone",
+  "country": "Country",
+  "platform": "Platform",
+  "download": "Download",
+  "copy": "Copy",
+  "conversionRate": "Conversion Rate",
+  "monthlyPerformance": "Monthly Performance"
 }

@@ -52,12 +52,12 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-slate-950 border-t border-slate-800/50">
+    <footer className="bg-background border-t border-border/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-16">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-12">
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="relative w-10 h-10">
+              <div className="relative w-12 h-12">
                 <Image
                   src="/logo.png"
                   alt={t("brandName")}
@@ -66,20 +66,20 @@ export default function Footer() {
                 />
               </div>
             </Link>
-            <p className="text-sm text-slate-400 mb-4 max-w-xs">
+            <p className="text-sm text-muted-foreground mb-4 max-w-xs">
               {t("tagline")}
             </p>
-            <div className="space-y-2 text-sm text-slate-400">
+            <div className="space-y-2 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-cyan-400" />
+                <Mail className="w-4 h-4 text-primary" />
                 <span>{t("supportEmail")}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-cyan-400" />
+                <Phone className="w-4 h-4 text-primary" />
                 <span>{t("phone")}</span>
               </div>
               <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-cyan-400" />
+                <MapPin className="w-4 h-4 text-primary" />
                 <span>{t("address")}</span>
               </div>
             </div>
@@ -93,7 +93,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-slate-400 hover:text-cyan-400 transition-colors"
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -104,19 +104,19 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 pt-8 border-t border-slate-800/50">
+        <div className="mt-12 pt-8 border-t border-border/50">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-slate-400">{t("copyright")}</p>
-            <div className="flex items-center gap-6 text-xs text-slate-500">
+            <p className="text-sm text-muted-foreground">{t("copyright")}</p>
+            <div className="flex items-center gap-6 text-xs text-muted-foreground">
               <span className="flex items-center gap-1">
-                <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                <span className="w-2 h-2 bg-signal-green rounded-full animate-pulse" />
                 {t("systemsOperational")}
               </span>
               <span>{t("license")}</span>
               <span>{t("regulator")}</span>
             </div>
           </div>
-          <p className="text-xs text-slate-500 mt-4 text-center max-w-3xl mx-auto">
+          <p className="text-xs text-muted-foreground mt-4 text-center max-w-3xl mx-auto">
             {t("riskWarningText")}
           </p>
         </div>

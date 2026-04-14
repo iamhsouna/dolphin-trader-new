@@ -20,13 +20,13 @@ export default function DashboardPage() {
   ];
 
   return (
-    <div className="min-h-screen pt-16 bg-slate-950">
+    <div className="min-h-screen pt-16 bg-background">
       <Navigation />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
           <div>
             <h1 className="text-3xl font-bold">{t("myDashboard")}</h1>
-            <p className="text-slate-400">Welcome back, John</p>
+            <p className="text-muted-foreground">{t("welcomeBack")}</p>
           </div>
           <div className="flex gap-3">
             <Link href="/register" className="btn-secondary px-4 py-2">
@@ -40,20 +40,20 @@ export default function DashboardPage() {
 
         <div className="grid md:grid-cols-4 gap-6 mb-8">
           {[
-            { label: t("totalBalance"), value: "$17,500.00", change: "+2.5%", icon: "💰", color: "from-cyan-500 to-blue-500" },
+            { label: t("totalBalance"), value: "$17,500.00", change: "+2.5%", icon: "💰", color: "from-[#5B31F5] to-[#7B57FF]" },
             { label: t("equity"), value: "$17,700.00", change: "+3.2%", icon: "📊", color: "from-green-500 to-emerald-500" },
             { label: t("availableMargin"), value: "$15,200.00", change: "-", icon: "📈", color: "from-purple-500 to-pink-500" },
-            { label: "Open Positions", value: "3", change: "-", icon: "🎯", color: "from-amber-500 to-orange-500" },
+            { label: t("openPositions"), value: "3", change: "-", icon: "🎯", color: "from-amber-500 to-orange-500" },
           ].map((stat, i) => (
             <div key={i} className="glass-card rounded-xl p-6">
               <div className="flex items-center justify-between mb-4">
                 <span className="text-3xl">{stat.icon}</span>
-                <span className={`text-sm font-medium ${stat.change.startsWith("+") ? "text-green-400" : stat.change === "-" ? "text-slate-400" : "text-red-400"}`}>
+                <span className={`text-sm font-medium ${stat.change.startsWith("+") ? "text-signal-green" : stat.change === "-" ? "text-muted-foreground" : "text-signal-red"}`}>
                   {stat.change}
                 </span>
               </div>
               <div className="text-2xl font-bold mb-1">{stat.value}</div>
-              <div className="text-sm text-slate-400">{stat.label}</div>
+              <div className="text-sm text-muted-foreground">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -63,18 +63,18 @@ export default function DashboardPage() {
             <div className="glass-card rounded-xl p-6">
               <div className="flex justify-between items-center mb-6">
                 <h2 className="text-xl font-bold">{t("mt5Accounts")}</h2>
-                <Link href="/mt5-accounts" className="text-cyan-400 hover:underline text-sm">View All</Link>
+                <Link href="/mt5-accounts" className="text-primary hover:underline text-sm">{t("viewAll")}</Link>
               </div>
               <div className="space-y-4">
                 {accounts.map((account) => (
-                  <div key={account.id} className="bg-slate-800/50 rounded-xl p-4 flex items-center justify-between">
+                  <div key={account.id} className="bg-secondary/50 rounded-xl p-4 flex items-center justify-between">
                     <div>
                       <div className="font-semibold">{account.id}</div>
-                      <div className="text-sm text-slate-400">{account.type} | {account.leverage}</div>
+                      <div className="text-sm text-muted-foreground">{account.type} | {account.leverage}</div>
                     </div>
                     <div className="text-right">
                       <div className="font-bold text-lg">${account.balance.toLocaleString()}</div>
-                      <div className="text-sm text-slate-400">Equity: ${account.equity.toLocaleString()}</div>
+                      <div className="text-sm text-muted-foreground">{t("equity")}: ${account.equity.toLocaleString()}</div>
                     </div>
                   </div>
                 ))}
@@ -83,30 +83,30 @@ export default function DashboardPage() {
 
             <div className="glass-card rounded-xl p-6">
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-xl font-bold">Recent Trades</h2>
-                <Link href="/history" className="text-cyan-400 hover:underline text-sm">View All</Link>
+                <h2 className="text-xl font-bold">{t("recentTrades")}</h2>
+                <Link href="/history" className="text-primary hover:underline text-sm">{t("viewAll")}</Link>
               </div>
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead>
-                    <tr className="text-left text-sm text-slate-400 border-b border-slate-700">
-                      <th className="pb-3">Symbol</th>
-                      <th className="pb-3">Type</th>
-                      <th className="pb-3">Lots</th>
-                      <th className="pb-3">Open</th>
-                      <th className="pb-3">Current</th>
-                      <th className="pb-3">Profit</th>
+                    <tr className="text-left text-sm text-muted-foreground border-b border-border">
+                      <th className="pb-3">{t("symbol")}</th>
+                      <th className="pb-3">{t("type")}</th>
+                      <th className="pb-3">{t("lots")}</th>
+                      <th className="pb-3">{t("open")}</th>
+                      <th className="pb-3">{t("current")}</th>
+                      <th className="pb-3">{t("profit")}</th>
                     </tr>
                   </thead>
                   <tbody>
                     {recentTrades.map((trade) => (
-                      <tr key={trade.id} className="border-b border-slate-700/50">
+                      <tr key={trade.id} className="border-b border-border/50">
                         <td className="py-3 font-medium">{trade.symbol}</td>
-                        <td className={`py-3 ${trade.type === "BUY" ? "text-green-400" : "text-red-400"}`}>{trade.type}</td>
+                        <td className={`py-3 ${trade.type === "BUY" ? "text-signal-green" : "text-signal-red"}`}>{trade.type}</td>
                         <td className="py-3">{trade.lots}</td>
                         <td className="py-3">{trade.open}</td>
                         <td className="py-3">{trade.current}</td>
-                        <td className={`py-3 font-medium ${trade.profit >= 0 ? "text-green-400" : "text-red-400"}`}>
+                        <td className={`py-3 font-medium ${trade.profit >= 0 ? "text-signal-green" : "text-signal-red"}`}>
                           {trade.profit >= 0 ? "+" : ""}${trade.profit.toFixed(2)}
                         </td>
                       </tr>
@@ -121,16 +121,16 @@ export default function DashboardPage() {
             <div className="glass-card rounded-xl p-6">
               <h2 className="text-xl font-bold mb-6">{t("wallet")}</h2>
               <div className="space-y-4">
-                <div className="flex justify-between items-center py-3 border-b border-slate-700/50">
-                  <span className="text-slate-400">USD Balance</span>
+                <div className="flex justify-between items-center py-3 border-b border-border/50">
+                  <span className="text-muted-foreground">{t("available")} USD</span>
                   <span className="font-bold">$17,500.00</span>
                 </div>
-                <div className="flex justify-between items-center py-3 border-b border-slate-700/50">
-                  <span className="text-slate-400">Pending</span>
-                  <span className="font-bold text-amber-400">$0.00</span>
+                <div className="flex justify-between items-center py-3 border-b border-border/50">
+                  <span className="text-muted-foreground">{t("pending")}</span>
+                  <span className="font-bold text-signal-amber">$0.00</span>
                 </div>
                 <div className="flex justify-between items-center py-3">
-                  <span className="text-slate-400">Total</span>
+                  <span className="text-muted-foreground">{t("total")}</span>
                   <span className="font-bold text-lg">$17,500.00</span>
                 </div>
               </div>
@@ -145,19 +145,19 @@ export default function DashboardPage() {
             </div>
 
             <div className="glass-card rounded-xl p-6">
-              <h2 className="text-xl font-bold mb-6">Quick Actions</h2>
+              <h2 className="text-xl font-bold mb-6">{t("quickActions")}</h2>
               <div className="space-y-3">
                 {[
-                  { icon: "📊", label: "Open New Trade", href: "/trading" },
-                  { icon: "📈", label: "Copy Trading", href: "/copy-trading" },
-                  { icon: "💱", label: "Deposit", href: "/deposit" },
-                  { icon: "💸", label: "Withdraw", href: "/withdraw" },
-                  { icon: "⚙️", label: "Settings", href: "/settings" },
+                  { icon: "📊", label: t("openNewTrade"), href: "/trading" },
+                  { icon: "📈", label: t("copyTrading"), href: "/copy-trading" },
+                  { icon: "💱", label: t("deposit"), href: "/deposit" },
+                  { icon: "💸", label: t("withdraw"), href: "/withdraw" },
+                  { icon: "⚙️", label: t("settings"), href: "/settings" },
                 ].map((action, i) => (
                   <Link
                     key={i}
                     href={action.href}
-                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-800/50 transition-colors"
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors"
                   >
                     <span className="text-xl">{action.icon}</span>
                     <span className="font-medium">{action.label}</span>

@@ -37,5 +37,8 @@
   "liveAccount": "حساب حقيقي",
   "readyToStart": "مستعد لبدء التداول؟",
   "tradeAnywhereDesc": "الوصول إلى حسابك من أي جهاز، في أي مكان في العالم.",
-  "windows": "ويندوز"
+  "windows": "ويندوز",
+  "openAccountInMinutes": "افتح حسابك في دقائق وابدأ التداول مع ميتاتريدر 5",
+  "openLiveAccount": "فتح حساب حقيقي",
+  "tryDemoFirst": "جرّب التداول التجريبي أولاً"
 }

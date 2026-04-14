@@ -24,5 +24,21 @@
   "faq": "FAQ",
   "partnership": "Partnership",
   "brandName": "Dolphin Markets",
-  "openNewTrade": "Open New Trade"
+  "openNewTrade": "Open New Trade",
+  "markets": "Markets",
+  "liveCharts": "Live Charts",
+  "portfolio": "Portfolio",
+  "orders": "Orders",
+  "watchlist": "Watchlist",
+  "news": "News",
+  "settings": "Settings",
+  "profile": "Profile",
+  "logout": "Logout",
+  "openAccount": "Open Account",
+  "notifications": "Notifications",
+  "EURUSD": "EUR/USD",
+  "GBPUSD": "GBP/USD",
+  "USDJPY": "USD/JPY",
+  "XAUUSD": "XAU/USD",
+  "BTCUSD": "BTC/USD"
 }

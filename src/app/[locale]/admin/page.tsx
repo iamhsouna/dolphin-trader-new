@@ -28,12 +28,12 @@ export default function AdminPage() {
   ];
 
   return (
-    <div className="min-h-screen pt-16 bg-slate-950">
+    <div className="min-h-screen pt-16 bg-background">
       <Navigation />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
         <div className="mb-8">
           <h1 className="text-3xl font-bold">{t("adminPanel")}</h1>
-          <p className="text-slate-400">{t("dashboardSubtitle")}</p>
+          <p className="text-muted-foreground">{t("dashboardSubtitle")}</p>
         </div>
 
         <div className="grid md:grid-cols-4 gap-6 mb-8">
@@ -42,8 +42,8 @@ export default function AdminPage() {
               <div className="text-3xl mb-2">{stat.icon}</div>
               <div className="text-2xl font-bold mb-1">{stat.value}</div>
               <div className="flex justify-between items-center">
-                <div className="text-sm text-slate-400">{stat.label}</div>
-                <span className={`text-sm font-medium ${stat.change.startsWith("+") ? "text-green-400" : stat.change === "-" ? "text-slate-400" : "text-red-400"}`}>
+                <div className="text-sm text-muted-foreground">{stat.label}</div>
+                <span className={`text-sm font-medium ${stat.change.startsWith("+") ? "text-signal-green" : stat.change === "-" ? "text-muted-foreground" : "text-signal-red"}`}>
                   {stat.change}
                 </span>
               </div>
@@ -55,12 +55,12 @@ export default function AdminPage() {
           <div className="glass-card rounded-xl p-6">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-xl font-bold">{t("recentUsersTitle")}</h2>
-              <button className="text-cyan-400 hover:underline text-sm">{t("viewAll")}</button>
+              <button className="text-primary hover:underline text-sm">{t("viewAll")}</button>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="text-left text-sm text-slate-400 border-b border-slate-700">
+                  <tr className="text-left text-sm text-muted-foreground border-b border-border">
                     <th className="pb-3">{t("name")}</th>
                     <th className="pb-3">{t("email")}</th>
                     <th className="pb-3">{t("status")}</th>
@@ -69,19 +69,19 @@ export default function AdminPage() {
                 </thead>
                 <tbody>
                   {recentUsers.map((user) => (
-                    <tr key={user.id} className="border-b border-slate-700/50">
+                    <tr key={user.id} className="border-b border-border/50">
                       <td className="py-3 font-medium">{user.name}</td>
-                      <td className="py-3 text-sm text-slate-400">{user.email}</td>
+                      <td className="py-3 text-sm text-muted-foreground">{user.email}</td>
                       <td className="py-3">
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                          user.status === t("verified") ? "bg-green-500/20 text-green-400" :
-                          user.status === t("pending") ? "bg-amber-500/20 text-amber-400" :
-                          "bg-red-500/20 text-red-400"
+                          user.status === t("verified") ? "bg-signal-green/20 text-signal-green" :
+                          user.status === t("pending") ? "bg-signal-amber/20 text-signal-amber" :
+                          "bg-signal-red/20 text-signal-red"
                         }`}>
                           {user.status}
                         </span>
                       </td>
-                      <td className="py-3 text-sm text-slate-400">{user.joined}</td>
+                      <td className="py-3 text-sm text-muted-foreground">{user.joined}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -92,12 +92,12 @@ export default function AdminPage() {
           <div className="glass-card rounded-xl p-6">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-xl font-bold">{t("recentDepositsTitle")}</h2>
-              <button className="text-cyan-400 hover:underline text-sm">{t("viewAll")}</button>
+              <button className="text-primary hover:underline text-sm">{t("viewAll")}</button>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="text-left text-sm text-slate-400 border-b border-slate-700">
+                  <tr className="text-left text-sm text-muted-foreground border-b border-border">
                     <th className="pb-3">{t("user")}</th>
                     <th className="pb-3">{t("amount")}</th>
                     <th className="pb-3">{t("method")}</th>
@@ -107,19 +107,19 @@ export default function AdminPage() {
                 </thead>
                 <tbody>
                   {recentDeposits.map((deposit) => (
-                    <tr key={deposit.id} className="border-b border-slate-700/50">
+                    <tr key={deposit.id} className="border-b border-border/50">
                       <td className="py-3 font-medium">{deposit.user}</td>
-                      <td className="py-3 text-green-400 font-medium">{deposit.amount}</td>
-                      <td className="py-3 text-sm text-slate-400">{deposit.method}</td>
+                      <td className="py-3 text-signal-green font-medium">{deposit.amount}</td>
+                      <td className="py-3 text-sm text-muted-foreground">{deposit.method}</td>
                       <td className="py-3">
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                          deposit.status === t("approved") ? "bg-green-500/20 text-green-400" :
-                          "bg-amber-500/20 text-amber-400"
+                          deposit.status === t("approved") ? "bg-signal-green/20 text-signal-green" :
+                          "bg-signal-amber/20 text-signal-amber"
                         }`}>
                           {deposit.status}
                         </span>
                       </td>
-                      <td className="py-3 text-sm text-slate-400">{deposit.date}</td>
+                      <td className="py-3 text-sm text-muted-foreground">{deposit.date}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -139,14 +139,14 @@ export default function AdminPage() {
               ].map((action, i) => (
                 <button
                   key={i}
-                  className="w-full flex items-center justify-between p-3 rounded-lg bg-slate-800/50 hover:bg-slate-700/50 transition-colors text-left"
+                  className="w-full flex items-center justify-between p-3 rounded-lg bg-secondary/50 hover:bg-secondary/50 transition-colors text-left"
                 >
                   <div className="flex items-center gap-3">
                     <span className="text-xl">{action.icon}</span>
                     <span className="font-medium">{action.label}</span>
                   </div>
                   {action.count > 0 && (
-                    <span className="bg-cyan-500 text-slate-900 px-2 py-1 rounded-full text-xs font-bold">
+                    <span className="bg-primary text-foreground px-2 py-1 rounded-full text-xs font-bold">
                       {action.count}
                     </span>
                   )}
@@ -164,11 +164,11 @@ export default function AdminPage() {
                 { service: t("withdrawalProcessor"), status: t("operational"), icon: "🟢" },
                 { service: t("kycSystem"), status: t("operational"), icon: "🟢" },
               ].map((item, i) => (
-                <div key={i} className="flex items-center justify-between py-2 border-b border-slate-700/50 last:border-0">
-                  <span className="text-slate-300">{item.service}</span>
+                <div key={i} className="flex items-center justify-between py-2 border-b border-border/50 last:border-0">
+                  <span className="text-muted-foreground">{item.service}</span>
                   <span className="flex items-center gap-2">
                     <span>{item.icon}</span>
-                    <span className="text-sm text-green-400">{item.status}</span>
+                    <span className="text-sm text-signal-green">{item.status}</span>
                   </span>
                 </div>
               ))}
@@ -183,17 +183,17 @@ export default function AdminPage() {
                 { name: "Sarah M.", profit: "+$3,180", trades: 32 },
                 { name: "Emma W.", profit: "+$2,890", trades: 28 },
               ].map((trader, i) => (
-                <div key={i} className="flex items-center justify-between py-2 border-b border-slate-700/50 last:border-0">
+                <div key={i} className="flex items-center justify-between py-2 border-b border-border/50 last:border-0">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-sm font-bold text-slate-900">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#5B31F5] to-[#7B57FF] flex items-center justify-center text-sm font-bold text-foreground">
                       {trader.name[0]}
                     </div>
                     <div>
                       <div className="font-medium text-sm">{trader.name}</div>
-                      <div className="text-xs text-slate-400">{trader.trades} {t("trades")}</div>
+                      <div className="text-xs text-muted-foreground">{trader.trades} {t("trades")}</div>
                     </div>
                   </div>
-                  <span className="text-green-400 font-medium">{trader.profit}</span>
+                  <span className="text-signal-green font-medium">{trader.profit}</span>
                 </div>
               ))}
             </div>

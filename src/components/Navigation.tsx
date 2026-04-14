@@ -14,6 +14,7 @@ export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +23,16 @@ export default function Navigation() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleMouseEnter = (key: string) => {
+    if (dropdownTimeout) clearTimeout(dropdownTimeout);
+    setOpenDropdown(key);
+  };
+
+  const handleMouseLeave = () => {
+    const timeout = setTimeout(() => setOpenDropdown(null), 100);
+    setDropdownTimeout(timeout);
+  };
 
   const products = [
     { name: t("products"), items: [
@@ -70,15 +81,15 @@ export default function Navigation() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-slate-950/95 backdrop-blur-md border-b border-slate-800/50"
-          : "bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950"
+          ? "bg-background/95 backdrop-blur-md border-b border-border"
+          : "bg-background/95 backdrop-blur-md border-b border-border"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-8">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="relative w-10 h-10">
+              <div className="relative w-12 h-12">
                 <Image
                   src="/logo.png"
                   alt={t("brandName")}
@@ -94,23 +105,27 @@ export default function Navigation() {
                   {item.items ? (
                     <div
                       className="relative"
-                      onMouseEnter={() => setOpenDropdown(item.key)}
-                      onMouseLeave={() => setOpenDropdown(null)}
+                      onMouseEnter={() => handleMouseEnter(item.key)}
+                      onMouseLeave={handleMouseLeave}
                     >
                       <button 
                         onClick={() => setOpenDropdown(openDropdown === item.key ? null : item.key)}
-                        className="flex items-center gap-1 px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-all"
+                        className="flex items-center gap-1 px-4 py-2 text-sm text-foreground hover:text-primary hover:bg-accent rounded-lg transition-all"
                       >
                         {item.name}
                         <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === item.key ? "rotate-180" : ""}`} />
                       </button>
                       {openDropdown === item.key && (
-                        <div className="absolute top-full left-0 mt-2 w-56 bg-slate-900/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-xl shadow-black/20 py-2 animate-fade-in z-50">
+                        <div 
+                          className="absolute top-full left-0 mt-2 w-56 bg-card/95 backdrop-blur-md border border-border rounded-xl shadow-xl py-2 animate-fade-in z-50"
+                          onMouseEnter={() => handleMouseEnter(item.key)}
+                          onMouseLeave={handleMouseLeave}
+                        >
                           {item.items.map((subItem) => (
                             <Link
                               key={subItem.href}
                               href={subItem.href}
-                              className="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-300 hover:text-white hover:bg-slate-800/50 transition-colors"
+                              className="flex items-center gap-3 px-4 py-2.5 text-sm text-foreground hover:text-primary hover:bg-accent transition-colors"
                             >
                               <span>{subItem.icon}</span>
                               {subItem.label}
@@ -122,7 +137,7 @@ export default function Navigation() {
                   ) : (
                     <Link
                       href={item.href!}
-                      className="flex items-center gap-2 px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-all"
+                      className="flex items-center gap-2 px-4 py-2 text-sm text-foreground hover:text-primary hover:bg-accent rounded-lg transition-all"
                     >
                       <span>{item.icon}</span>
                       {item.label}
@@ -137,12 +152,12 @@ export default function Navigation() {
             <LanguageSwitcher />
             <ModeToggle />
             <Link href="/login">
-              <Button variant="ghost" size="sm" className="text-slate-300 hover:text-white">
+              <Button variant="ghost" size="sm" className="text-foreground hover:text-primary">
                 {t("login")}
               </Button>
             </Link>
             <Link href="/register">
-              <Button size="sm" className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white shadow-lg shadow-cyan-500/25">
+              <Button size="sm" className="bg-gradient-to-r from-[#5B31F5] to-[#7B57FF] hover:from-[#7B57FF] hover:to-[#5B31F5] text-white shadow-lg shadow-[#5B31F5]/25">
                 {t("getStarted")}
               </Button>
             </Link>
@@ -150,7 +165,7 @@ export default function Navigation() {
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-slate-300 hover:text-white"
+            className="lg:hidden p-2 text-foreground hover:text-primary"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -158,7 +173,7 @@ export default function Navigation() {
       </div>
 
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-slate-950/98 backdrop-blur-md border-t border-slate-800/50 animate-fade-in">
+        <div className="lg:hidden bg-background/98 backdrop-blur-md border-t border-border animate-fade-in">
           <div className="px-4 py-4 space-y-2">
             {navItems.map((item) => (
               <div key={item.key}>
@@ -166,7 +181,7 @@ export default function Navigation() {
                   <>
                     <button
                       onClick={() => setOpenDropdown(openDropdown === item.key ? null : item.key)}
-                      className="w-full flex items-center justify-between px-4 py-2 text-sm font-semibold text-cyan-400"
+                      className="w-full flex items-center justify-between px-4 py-2 text-sm font-semibold text-primary"
                     >
                       {item.name}
                       <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === item.key ? "rotate-180" : ""}`} />
@@ -181,7 +196,7 @@ export default function Navigation() {
                               setMobileMenuOpen(false);
                               setOpenDropdown(null);
                             }}
-                            className="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
+                            className="flex items-center gap-3 px-4 py-2 text-sm text-foreground hover:text-primary hover:bg-accent rounded-lg transition-colors"
                           >
                             <span>{subItem.icon}</span>
                             {subItem.label}
@@ -194,7 +209,7 @@ export default function Navigation() {
                   <Link
                     href={item.href!}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
+                    className="flex items-center gap-3 px-4 py-2 text-sm text-foreground hover:text-primary hover:bg-accent rounded-lg transition-colors"
                   >
                     <span>{item.icon}</span>
                     {item.label}
@@ -202,14 +217,14 @@ export default function Navigation() {
                 )}
               </div>
             ))}
-            <div className="pt-4 border-t border-slate-800/50 flex flex-col gap-2">
+            <div className="pt-4 border-t border-border flex flex-col gap-2">
               <Link href="/login" onClick={() => setMobileMenuOpen(false)}>
-                <Button variant="ghost" className="w-full justify-start text-slate-300">
+                <Button variant="ghost" className="w-full justify-start text-foreground">
                   {t("login")}
                 </Button>
               </Link>
               <Link href="/register" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white">
+                <Button className="w-full bg-gradient-to-r from-[#5B31F5] to-[#7B57FF] text-white">
                   {t("getStarted")}
                 </Button>
               </Link>

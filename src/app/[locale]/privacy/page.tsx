@@ -8,19 +8,19 @@ export default function PrivacyPage() {
   const t = useTranslations("Privacy");
 
   return (
-    <div className="min-h-screen pt-16 bg-slate-950">
+    <div className="min-h-screen pt-16 bg-background">
       <Navigation />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
         <h1 className="text-4xl font-bold mb-8">{t("pageTitle")}</h1>
-        <p className="text-slate-400 mb-8">{t("lastUpdated")}</p>
+        <p className="text-muted-foreground mb-8">{t("lastUpdated")}</p>
 
         <div className="glass-card rounded-2xl p-8 space-y-8">
           <section>
             <h2 className="text-2xl font-bold mb-4">{t("informationWeCollect")}</h2>
-            <p className="text-slate-300 mb-4">
+            <p className="text-muted-foreground mb-4">
               {t("informationWeCollectText")}
             </p>
-            <ul className="list-disc list-inside text-slate-400 space-y-2">
+            <ul className="list-disc list-inside text-muted-foreground space-y-2">
               <li>{t("info1")}</li>
               <li>{t("info2")}</li>
               <li>{t("info3")}</li>
@@ -31,10 +31,10 @@ export default function PrivacyPage() {
 
           <section>
             <h2 className="text-2xl font-bold mb-4">{t("howWeUse")}</h2>
-            <p className="text-slate-300 mb-4">
+            <p className="text-muted-foreground mb-4">
               {t("howWeUseText")}
             </p>
-            <ul className="list-disc list-inside text-slate-400 space-y-2">
+            <ul className="list-disc list-inside text-muted-foreground space-y-2">
               <li>{t("use1")}</li>
               <li>{t("use2")}</li>
               <li>{t("use3")}</li>
@@ -46,10 +46,10 @@ export default function PrivacyPage() {
 
           <section>
             <h2 className="text-2xl font-bold mb-4">{t("informationSharing")}</h2>
-            <p className="text-slate-300 mb-4">
+            <p className="text-muted-foreground mb-4">
               {t("sharingText")}
             </p>
-            <ul className="list-disc list-inside text-slate-400 space-y-2">
+            <ul className="list-disc list-inside text-muted-foreground space-y-2">
               <li>{t("share1")}</li>
               <li>{t("share2")}</li>
               <li>{t("share3")}</li>
@@ -59,24 +59,24 @@ export default function PrivacyPage() {
 
           <section>
             <h2 className="text-2xl font-bold mb-4">{t("dataSecurity")}</h2>
-            <p className="text-slate-300">
+            <p className="text-muted-foreground">
               {t("securityText")}
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mb-4">{t("cookies")}</h2>
-            <p className="text-slate-300">
+            <p className="text-muted-foreground">
               {t("cookiesText")}
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mb-4">{t("yourRights")}</h2>
-            <p className="text-slate-300 mb-4">
+            <p className="text-muted-foreground mb-4">
               {t("rightsText")}
             </p>
-            <ul className="list-disc list-inside text-slate-400 space-y-2">
+            <ul className="list-disc list-inside text-muted-foreground space-y-2">
               <li>{t("right1")}</li>
               <li>{t("right2")}</li>
               <li>{t("right3")}</li>
@@ -88,7 +88,7 @@ export default function PrivacyPage() {
 
           <section>
             <h2 className="text-2xl font-bold mb-4">{t("contactUs")}</h2>
-            <p className="text-slate-300">
+            <p className="text-muted-foreground">
               {t("contactText")}
             </p>
           </section>

@@ -23,5 +23,19 @@
   "withdrawToBank": "سحب إلى الحساب البنكي",
   "date": "التاريخ",
   "trader": "المتداول",
-  "commission": "العمولة"
+  "commission": "العمولة",
+  "pending": "قيد الانتظار",
+  "viewAll": "عرض الكل",
+  "available": "متاح",
+  "referralDescription": "شارك هذا الرابط لكسب عمولات على كل عميل يسجل من خلال إحالتك.",
+  "firstName": "الاسم الأول",
+  "lastName": "اسم العائلة",
+  "email": "البريد الإلكتروني",
+  "phone": "الهاتف",
+  "country": "البلد",
+  "platform": "المنصة",
+  "download": "تحميل",
+  "copy": "نسخ",
+  "conversionRate": "معدل التحويل",
+  "monthlyPerformance": "الأداء الشهري"
 }

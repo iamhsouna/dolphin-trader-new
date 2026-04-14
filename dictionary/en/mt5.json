@@ -37,5 +37,8 @@
   "liveAccount": "Live Account",
   "readyToStart": "Ready to Start Trading?",
   "tradeAnywhereDesc": "Trade anywhere, anytime",
-  "windows": "Windows"
+  "windows": "Windows",
+  "openAccountInMinutes": "Open your account in minutes and start trading with MetaTrader 5",
+  "openLiveAccount": "Open Live Account",
+  "tryDemoFirst": "Try Demo First"
 }

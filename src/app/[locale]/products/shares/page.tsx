@@ -23,7 +23,7 @@ export default function SharesPage() {
       title={t("sharesTitle")}
       description={t("sharesDescription")}
       icon="📈"
-      color="from-indigo-500 to-blue-500"
+      color="from-[#5B31F5] to-[#7B57FF]"
       instruments={instruments}
     />
   );

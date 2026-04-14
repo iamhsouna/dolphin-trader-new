@@ -27,7 +27,7 @@ export default function ForexPage() {
       title={t("forexTitle")}
       description={t("forexDescription")}
       icon="💱"
-      color="from-blue-500 to-cyan-500"
+      color="from-[#5B31F5] to-[#7B57FF]"
       instruments={instruments}
     />
   );

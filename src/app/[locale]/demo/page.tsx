@@ -24,13 +24,13 @@ export default function DemoPage() {
   };
 
   return (
-    <div className="min-h-screen pt-16 bg-slate-950">
+    <div className="min-h-screen pt-16 bg-background">
       <Navigation />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-5xl font-bold mb-6">{t("pageTitle")}</h1>
-            <p className="text-xl text-slate-400 mb-8">
+            <p className="text-xl text-muted-foreground mb-8">
               {t("pageSubtitle")}
             </p>
 
@@ -45,7 +45,7 @@ export default function DemoPage() {
                   <div className="text-3xl">{item.icon}</div>
                   <div>
                     <h3 className="font-semibold text-lg">{item.title}</h3>
-                    <p className="text-slate-400">{item.desc}</p>
+                    <p className="text-muted-foreground">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -63,7 +63,7 @@ export default function DemoPage() {
                     value={formData.firstName}
                     onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                     placeholder={t("firstNamePlaceholder")}
-                    className="bg-slate-800/50 border-slate-700"
+                    className="bg-secondary/50 border-border"
                   />
                 </div>
                 <div>
@@ -73,7 +73,7 @@ export default function DemoPage() {
                     value={formData.lastName}
                     onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                     placeholder={t("lastNamePlaceholder")}
-                    className="bg-slate-800/50 border-slate-700"
+                    className="bg-secondary/50 border-border"
                   />
                 </div>
               </div>
@@ -85,7 +85,7 @@ export default function DemoPage() {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   placeholder={t("emailPlaceholder")}
-                  className="bg-slate-800/50 border-slate-700"
+                  className="bg-secondary/50 border-border"
                 />
               </div>
 
@@ -96,7 +96,7 @@ export default function DemoPage() {
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   placeholder={t("phonePlaceholder")}
-                  className="bg-slate-800/50 border-slate-700"
+                  className="bg-secondary/50 border-border"
                 />
               </div>
 
@@ -104,9 +104,9 @@ export default function DemoPage() {
                 {t("submitButton")}
               </Button>
 
-              <p className="text-sm text-slate-400 text-center">
+              <p className="text-sm text-muted-foreground text-center">
                 {t("alreadyHaveAccount")}{" "}
-                <Link href="/login" className="text-cyan-400 hover:underline">
+                <Link href="/login" className="text-primary hover:underline">
                   {t("signInLink")}
                 </Link>
               </p>

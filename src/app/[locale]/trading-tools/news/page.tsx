@@ -19,14 +19,14 @@ export default function MarketNewsPage() {
   ];
 
   return (
-    <div className="min-h-screen pt-16 bg-slate-950">
+    <div className="min-h-screen pt-16 bg-background">
       <ComingSoonModal isOpen={showModal} onClose={() => setShowModal(false)} />
       <Navigation />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
         <div className="text-center mb-12">
           <div className="text-6xl mb-4">📰</div>
           <h1 className="text-4xl lg:text-5xl font-bold mb-4">{t("marketNews")}</h1>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             {t("updates247")} - {t("sentimentAnalysis")}
           </p>
         </div>
@@ -36,23 +36,23 @@ export default function MarketNewsPage() {
             {news.map((item) => (
               <div key={item.id} className="glass-card rounded-xl p-6 hover-lift">
                 <div className="flex items-center gap-4 mb-3">
-                  <span className="text-slate-400 text-sm">{item.time}</span>
-                  <span className="px-2 py-1 bg-slate-800/50 rounded text-xs">{item.source}</span>
+                  <span className="text-muted-foreground text-sm">{item.time}</span>
+                  <span className="px-2 py-1 bg-secondary/50 rounded text-xs">{item.source}</span>
                   <span className={`px-2 py-1 rounded text-xs font-medium ${
-                    item.impact === "High" ? "bg-red-500/20 text-red-400" : "bg-amber-500/20 text-amber-400"
+                    item.impact === "High" ? "bg-signal-red/20 text-signal-red" : "bg-signal-amber/20 text-signal-amber"
                   }`}>
                     {item.impact} {t("impact")}
                   </span>
                 </div>
-                <h3 className="text-lg font-bold mb-2 hover:text-cyan-400 cursor-pointer">{item.title}</h3>
+                <h3 className="text-lg font-bold mb-2 hover:text-primary cursor-pointer">{item.title}</h3>
                 <div className="flex items-center justify-between">
                   <span className={`text-sm font-medium ${
-                    item.sentiment === "Bullish" ? "text-green-400" : 
-                    item.sentiment === "Bearish" ? "text-red-400" : "text-slate-400"
+                    item.sentiment === "Bullish" ? "text-signal-green" : 
+                    item.sentiment === "Bearish" ? "text-signal-red" : "text-muted-foreground"
                   }`}>
                     {item.sentiment}
                   </span>
-                  <button className="text-cyan-400 text-sm hover:underline">{t("readMore")} →</button>
+                  <button className="text-primary text-sm hover:underline">{t("readMore")} →</button>
                 </div>
               </div>
             ))}
@@ -68,11 +68,11 @@ export default function MarketNewsPage() {
                   { pair: "USD/JPY", change: "-0.28%", sentiment: "52% Bearish" },
                   { pair: "XAU/USD", change: "+0.82%", sentiment: "71% Bullish" },
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center justify-between py-2 border-b border-slate-700/50 last:border-0">
+                  <div key={i} className="flex items-center justify-between py-2 border-b border-border/50 last:border-0">
                     <span className="font-medium">{item.pair}</span>
                     <div className="text-right">
-                      <div className={item.change.startsWith("+") ? "text-green-400" : "text-red-400"}>{item.change}</div>
-                      <div className="text-xs text-slate-400">{item.sentiment}</div>
+                      <div className={item.change.startsWith("+") ? "text-signal-green" : "text-signal-red"}>{item.change}</div>
+                      <div className="text-xs text-muted-foreground">{item.sentiment}</div>
                     </div>
                   </div>
                 ))}
@@ -81,7 +81,7 @@ export default function MarketNewsPage() {
 
             <div className="glass-card rounded-xl p-6">
               <h3 className="text-lg font-bold mb-4">{t("customAlerts")}</h3>
-              <p className="text-slate-400 text-sm mb-4">
+              <p className="text-muted-foreground text-sm mb-4">
                 {t("customAlerts")}
               </p>
               <button onClick={() => setShowModal(true)} className="btn-primary w-full">
@@ -91,21 +91,21 @@ export default function MarketNewsPage() {
 
             <div className="glass-card rounded-xl p-6">
               <h3 className="text-lg font-bold mb-4">{t("marketNews")}</h3>
-              <ul className="space-y-2 text-slate-400 text-sm">
+              <ul className="space-y-2 text-muted-foreground text-sm">
                 <li className="flex items-center gap-2">
-                  <span className="text-cyan-400">•</span> {t("reuters")}
+                  <span className="text-primary">•</span> {t("reuters")}
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-cyan-400">•</span> {t("bloomberg")}
+                  <span className="text-primary">•</span> {t("bloomberg")}
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-cyan-400">•</span> {t("fxStreet")}
+                  <span className="text-primary">•</span> {t("fxStreet")}
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-cyan-400">•</span> {t("cnbc")}
+                  <span className="text-primary">•</span> {t("cnbc")}
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-cyan-400">•</span> {t("dailyFx")}
+                  <span className="text-primary">•</span> {t("dailyFx")}
                 </li>
               </ul>
             </div>

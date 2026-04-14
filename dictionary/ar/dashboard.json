@@ -33,5 +33,14 @@
   "total": "الإجمالي",
   "available": "متاح",
   "pendingCommission": "العمولة المعلقة",
-  "referralDescription": "شارك هذا الرابط لكسب عمولات على كل عميل يسجل من خلال إحالتك."
+  "referralDescription": "شارك هذا الرابط لكسب عمولات على كل عميل يسجل من خلال إحالتك.",
+  "cancel": "إلغاء",
+  "minDepositMessage": "الحد الأدنى للإيداع 10 دولار",
+  "processingTimeMessage": "وقت المعالجة 1-3 أيام عمل",
+  "securityMessage": "جميع المعاملات مؤمنة بتشفير SSL",
+  "withdrawDescription": "سحب الأموال من حسابك بسرعة وأمان",
+  "withdrawMethod": "طريقة السحب",
+  "minWithdrawMessage": "الحد الأدنى للسحب 10 دولار",
+  "processingTimeWithdraw": "وقت المعالجة 1-5 أيام عمل",
+  "verificationMessage": "قد يلزم التحقق للسحب الكبيرة"
 }

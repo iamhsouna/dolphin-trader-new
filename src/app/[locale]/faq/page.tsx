@@ -55,12 +55,12 @@ export default function FAQPage() {
   ];
 
   return (
-    <div className="min-h-screen pt-16 bg-slate-950">
+    <div className="min-h-screen pt-16 bg-background">
       <Navigation />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-4">{t("pageTitle")}</h1>
-          <p className="text-xl text-slate-400">
+          <p className="text-xl text-muted-foreground">
             {t("pageSubtitle")}
           </p>
         </div>
@@ -68,7 +68,7 @@ export default function FAQPage() {
         <div className="space-y-8">
           {faqs.map((category, catIndex) => (
             <div key={catIndex}>
-              <h2 className="text-2xl font-bold mb-4 text-cyan-400">{category.category}</h2>
+              <h2 className="text-2xl font-bold mb-4 text-primary">{category.category}</h2>
               <div className="space-y-3">
                 {category.questions.map((faq, qIndex) => {
                   const globalIndex = catIndex * 10 + qIndex;
@@ -76,17 +76,17 @@ export default function FAQPage() {
                     <div key={qIndex} className="glass-card rounded-xl overflow-hidden">
                       <button
                         onClick={() => setOpenIndex(openIndex === globalIndex ? null : globalIndex)}
-                        className="w-full flex items-center justify-between p-5 text-left hover:bg-slate-800/30 transition-colors"
+                        className="w-full flex items-center justify-between p-5 text-left hover:bg-secondary/30 transition-colors"
                       >
                         <span className="font-medium pr-4">{faq.q}</span>
                         <ChevronDown
-                          className={`w-5 h-5 text-slate-400 transition-transform ${
+                          className={`w-5 h-5 text-muted-foreground transition-transform ${
                             openIndex === globalIndex ? "rotate-180" : ""
                           }`}
                         />
                       </button>
                       {openIndex === globalIndex && (
-                        <div className="px-5 pb-5 text-slate-400">
+                        <div className="px-5 pb-5 text-muted-foreground">
                           {faq.a}
                         </div>
                       )}
@@ -98,9 +98,9 @@ export default function FAQPage() {
           ))}
         </div>
 
-        <div className="mt-16 glass-card rounded-2xl p-8 text-center bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+        <div className="mt-16 glass-card rounded-2xl p-8 text-center bg-gradient-to-r from-primary/30 to-primary/30">
           <h2 className="text-2xl font-bold mb-4">{t("stillHaveQuestions")}</h2>
-          <p className="text-slate-400 mb-6">
+          <p className="text-muted-foreground mb-6">
             {t("supportMessage")}
           </p>
           <div className="flex flex-wrap justify-center gap-4">

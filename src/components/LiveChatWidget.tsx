@@ -51,7 +51,7 @@ export default function LiveChatWidget() {
     <>
       {isOpen && (
         <div className="fixed bottom-24 right-6 w-80 glass-card rounded-2xl overflow-hidden z-[60] animate-fade-in shadow-2xl">
-          <div className="bg-gradient-to-r from-cyan-600 to-blue-600 p-4 flex items-center justify-between">
+          <div className="bg-gradient-to-r from-primary to-primary p-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
                 <span className="text-xl">💬</span>
@@ -69,7 +69,7 @@ export default function LiveChatWidget() {
             </button>
           </div>
 
-          <div className="h-80 overflow-y-auto p-4 space-y-4 bg-slate-900/50">
+          <div className="h-80 overflow-y-auto p-4 space-y-4 bg-background/50">
             {messages.map((msg) => (
               <div
                 key={msg.id}
@@ -78,8 +78,8 @@ export default function LiveChatWidget() {
                 <div
                   className={`max-w-[80%] rounded-2xl px-4 py-2 ${
                     msg.isBot
-                      ? "bg-slate-800 text-slate-200"
-                      : "bg-gradient-to-r from-cyan-600 to-blue-600 text-white"
+                      ? "bg-secondary text-slate-200"
+                      : "bg-gradient-to-r from-primary to-primary text-white"
                   }`}
                 >
                   <p className="text-sm">{msg.text}</p>
@@ -88,19 +88,19 @@ export default function LiveChatWidget() {
             ))}
           </div>
 
-          <div className="p-4 bg-slate-800/50 border-t border-slate-700">
+          <div className="p-4 bg-secondary/50 border-t border-border">
             <div className="flex gap-2">
               <Input
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 onKeyPress={(e) => e.key === "Enter" && handleSend()}
                 placeholder={t("placeholder")}
-                className="flex-1 bg-slate-700/50 border-slate-600 text-white placeholder:text-slate-400"
+                className="flex-1 bg-secondary/50 border-border text-white placeholder:text-muted-foreground"
               />
               <Button
                 onClick={handleSend}
                 size="icon"
-                className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400"
+                className="bg-gradient-to-r from-[#5B31F5] to-[#7B57FF] hover:from-[#7B57FF] hover:to-[#5B31F5]"
               >
                 <Send className="w-4 h-4" />
               </Button>
@@ -111,7 +111,7 @@ export default function LiveChatWidget() {
 
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-lg shadow-cyan-500/30 flex items-center justify-center hover:scale-110 transition-transform z-[60]"
+        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-r from-[#5B31F5] to-[#7B57FF] rounded-full shadow-lg shadow-primary/30 flex items-center justify-center hover:scale-110 transition-transform z-[60]"
       >
         {isOpen ? (
           <X className="w-6 h-6 text-white" />
