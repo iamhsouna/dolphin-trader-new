@@ -1168,5 +1168,5 @@
 
 html:not(.dark) img[src*="logo-white"],
 html:not(.dark) [style*="logo-white"] {
-  filter: brightness(0) invert(1);
+  filter: brightness(0);
 }
