@@ -132,7 +132,7 @@ export default function WebTraderPage() {
             </button>
             <Link href="/" className="flex items-center gap-2">
               <div className="relative w-7 h-7">
-                <Image src="/logo.png" alt="Dolphin Markets" fill className="object-contain" />
+                <Image src="/logo-white.png" alt="Dolphin Markets" fill className="object-contain" />
               </div>
               <span className="font-bold text-foreground hidden sm:inline text-sm">Dolphin Markets</span>
             </Link>

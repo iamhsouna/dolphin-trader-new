@@ -59,7 +59,7 @@ export default function MT5Page() {
             <div className="relative">
               <div className="glass-card rounded-2xl p-4 bg-background/80">
                 <Image
-                  src="/logo.png"
+                  src="/logo-white.png"
                   alt="MT5 Platform"
                   width={600}
                   height={400}

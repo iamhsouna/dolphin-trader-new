@@ -59,7 +59,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-2 mb-4">
               <div className="relative w-20 h-20">
                 <Image
-                  src="/logo.png"
+                  src="/logo-white.png"
                   alt={t("brandName")}
                   fill
                   className="object-contain"
