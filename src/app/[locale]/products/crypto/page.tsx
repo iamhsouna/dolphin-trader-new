@@ -22,8 +22,8 @@ export default function CryptoPage() {
     <ProductLayout
       title={t("cryptoTitle")}
       description={t("cryptoDescription")}
-      icon="₿"
-      color="from-orange-500 to-red-500"
+      iconKey="crypto"
+      productCategory="crypto"
       instruments={instruments}
     />
   );

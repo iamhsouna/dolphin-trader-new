@@ -1,0 +1,21 @@
+{
+  "title": "Trading",
+  "subtitle": "Trade global markets with our advanced platform",
+  "marketWatch": "Market Watch",
+  "forex": "Forex",
+  "metals": "Metals",
+  "crypto": "Crypto",
+  "indices": "Indices",
+  "commodities": "Commodities",
+  "spread": "Spread",
+  "leverage": "Leverage",
+  "orderEntry": "Order Entry",
+  "live": "Live",
+  "volume": "Volume",
+  "buy": "Buy",
+  "sell": "Sell",
+  "positions": "Open Positions",
+  "pendingOrders": "Pending Orders",
+  "noPositions": "No open positions",
+  "noPendingOrders": "No pending orders"
+}

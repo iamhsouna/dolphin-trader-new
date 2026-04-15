@@ -26,8 +26,8 @@ export default function ForexPage() {
     <ProductLayout
       title={t("forexTitle")}
       description={t("forexDescription")}
-      icon="💱"
-      color="from-[#5B31F5] to-[#7B57FF]"
+      iconKey="exchange"
+      productCategory="forex"
       instruments={instruments}
     />
   );

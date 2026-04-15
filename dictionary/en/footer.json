@@ -1,5 +1,5 @@
 {
-  "copyright": "© 2024 Dolphin Markets Ltd. All rights reserved.",
+  "copyright": "© 2026 Dolphin Markets Ltd. All rights reserved.",
   "terms": "Terms & Conditions",
   "privacy": "Privacy Policy",
   "riskWarning": "Risk Warning",
@@ -31,5 +31,8 @@
   "address": "Port Louis, Mauritius",
   "systemsOperational": "All Systems Operational",
   "license": "License: GB22200637",
-  "regulator": "FSC Mauritius"
+  "regulator": "FSC Mauritius",
+  "developer": "Developed by Hsouna Zinoubi",
+  "developerEmail": "iamhsouna@gmail.com",
+  "developerPhone": "00971545490312"
 }

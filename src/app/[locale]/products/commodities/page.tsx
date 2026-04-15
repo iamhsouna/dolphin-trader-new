@@ -22,8 +22,8 @@ export default function CommoditiesPage() {
     <ProductLayout
       title={t("commoditiesTitle")}
       description={t("commoditiesDescription")}
-      icon="🛢️"
-      color="from-green-500 to-emerald-500"
+      iconKey="droplet"
+      productCategory="commodities"
       instruments={instruments}
     />
   );

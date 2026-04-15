@@ -1,5 +1,5 @@
 {
-  "copyright": "© 2024 دولفين ماركتس Ltd. جميع الحقوق محفوظة.",
+  "copyright": "© 2026 دولفين ماركتس Ltd. جميع الحقوق محفوظة.",
   "terms": "الشروط والأحكام",
   "privacy": "سياسة الخصوصية",
   "riskWarning": "تحذير المخاطرة",
@@ -31,5 +31,8 @@
   "address": "بورت لويس، موريشيوس",
   "systemsOperational": "جميع الأنظمة تعمل",
   "license": "الترخيص: GB22200637",
-  "regulator": "FSC موريشيوس"
+  "regulator": "FSC موريشيوس",
+  "developer": "تطوير Hsouna Zinoubi",
+  "developerEmail": "iamhsouna@gmail.com",
+  "developerPhone": "00971545490312"
 }

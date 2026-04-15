@@ -20,7 +20,7 @@ export interface AccountType {
 }
 
 export interface Feature {
-  icon: string;
+  iconKey: string;
   titleKey: string;
   descKey: string;
 }
@@ -54,12 +54,12 @@ export const accountTypes: AccountType[] = [
 ];
 
 export const features: Feature[] = [
-  { icon: "🎯", titleKey: "rawSpreads", descKey: "rawSpreadsDesc" },
-  { icon: "⚡", titleKey: "instantExecutionFeature", descKey: "instantExecutionFeatureDesc" },
-  { icon: "🔒", titleKey: "segregatedFundsFeature", descKey: "segregatedFundsFeatureDesc" },
-  { icon: "🌍", titleKey: "instruments", descKey: "instrumentsDesc" },
-  { icon: "📱", titleKey: "mt5Platform", descKey: "mt5PlatformDesc" },
-  { icon: "🏆", titleKey: "support247", descKey: "support247Desc" },
+  { iconKey: "crosshair", titleKey: "rawSpreads", descKey: "rawSpreadsDesc" },
+  { iconKey: "zap", titleKey: "instantExecutionFeature", descKey: "instantExecutionFeatureDesc" },
+  { iconKey: "lock", titleKey: "segregatedFundsFeature", descKey: "segregatedFundsFeatureDesc" },
+  { iconKey: "globe", titleKey: "instruments", descKey: "instrumentsDesc" },
+  { iconKey: "smartphone", titleKey: "mt5Platform", descKey: "mt5PlatformDesc" },
+  { iconKey: "trophy", titleKey: "support247", descKey: "support247Desc" },
 ];
 
 export const stats: Stat[] = [
@@ -83,30 +83,30 @@ export const awards = [
 ];
 
 export const badges = [
-  { icon: "🔒", labelKey: "ssl256" },
-  { icon: "🏛️", labelKey: "fscRegulated" },
-  { icon: "💰", labelKey: "segregatedFundsBadge" },
-  { icon: "🛡️", labelKey: "faSecurity" },
+  { iconKey: "lock", labelKey: "ssl256" },
+  { iconKey: "landmark", labelKey: "fscRegulated" },
+  { iconKey: "wallet", labelKey: "segregatedFundsBadge" },
+  { iconKey: "shield", labelKey: "faSecurity" },
 ];
 
 export const regulations = [
-  { icon: "🏛️", titleKey: "regulatedByFSC", descKey: "regulatedByFSCDesc" },
-  { icon: "🔒", titleKey: "segregatedAccounts", descKey: "segregatedAccountsDesc" },
-  { icon: "🛡️", titleKey: "advancedSecurity", descKey: "advancedSecurityDesc" },
+  { iconKey: "landmark", titleKey: "regulatedByFSC", descKey: "regulatedByFSCDesc" },
+  { iconKey: "lock", titleKey: "segregatedAccounts", descKey: "segregatedAccountsDesc" },
+  { iconKey: "shield", titleKey: "advancedSecurity", descKey: "advancedSecurityDesc" },
 ];
 
 export const platformFeatures = [
-  { icon: "⚡", titleKey: "instantExecution", descKey: "instantExecutionDesc" },
-  { icon: "📊", titleKey: "technicalIndicators", descKey: "automatedTrading" },
-  { icon: "🤖", titleKey: "automatedTrading", descKey: "automatedTrading" },
-  { icon: "📱", titleKey: "mobileTrading", descKey: "fullPower" },
+  { iconKey: "zap", titleKey: "instantExecution", descKey: "instantExecutionDesc" },
+  { iconKey: "barChart", titleKey: "technicalIndicators", descKey: "automatedTrading" },
+  { iconKey: "bot", titleKey: "automatedTrading", descKey: "automatedTrading" },
+  { iconKey: "smartphone", titleKey: "mobileTrading", descKey: "fullPower" },
 ];
 
 export const products = [
-  { nameKey: "forex", icon: "💱", descKey: "forexDesc", spread: "From 0.0 pips", link: "/products/forex", color: "from-blue-500 to-cyan-500" },
-  { nameKey: "goldSilver", icon: "🥇", descKey: "goldSilverDesc", spread: "From 0.0 pips", link: "/products/metals", color: "from-amber-500 to-yellow-500" },
-  { nameKey: "indices", icon: "📊", descKey: "indicesDesc", spread: "From 0.2 pips", link: "/products/indices", color: "from-purple-500 to-pink-500" },
-  { nameKey: "oil", icon: "🛢️", descKey: "oilDesc", spread: "From 0.3 pips", link: "/products/commodities", color: "from-green-500 to-emerald-500" },
-  { nameKey: "crypto", icon: "₿", descKey: "cryptoDesc", spread: "From 0.5 pips", link: "/products/crypto", color: "from-orange-500 to-red-500" },
-  { nameKey: "shares", icon: "📈", descKey: "sharesDesc", spread: "From 0.1 pips", link: "/products/shares", color: "from-indigo-500 to-blue-500" },
+  { nameKey: "forex", iconKey: "exchange", descKey: "forexDesc", spread: "From 0.0 pips", link: "/products/forex", color: "from-blue-500 to-cyan-500" },
+  { nameKey: "goldSilver", iconKey: "gem", descKey: "goldSilverDesc", spread: "From 0.0 pips", link: "/products/metals", color: "from-amber-500 to-yellow-500" },
+  { nameKey: "indices", iconKey: "barChart", descKey: "indicesDesc", spread: "From 0.2 pips", link: "/products/indices", color: "from-purple-500 to-pink-500" },
+  { nameKey: "oil", iconKey: "droplet", descKey: "oilDesc", spread: "From 0.3 pips", link: "/products/commodities", color: "from-green-500 to-emerald-500" },
+  { nameKey: "crypto", iconKey: "crypto", descKey: "cryptoDesc", spread: "From 0.5 pips", link: "/products/crypto", color: "from-orange-500 to-red-500" },
+  { nameKey: "shares", iconKey: "trendingUp", descKey: "sharesDesc", spread: "From 0.1 pips", link: "/products/shares", color: "from-indigo-500 to-blue-500" },
 ];

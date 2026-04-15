@@ -48,5 +48,6 @@
   "appStore": "App Store",
   "googlePlayStore": "Google Play",
   "serverOnline": "Server Online",
-  "version": "Version: 5.0.45"
+  "version": "Version: 5.0.45",
+  "comingSoon": "Coming Soon"
 }

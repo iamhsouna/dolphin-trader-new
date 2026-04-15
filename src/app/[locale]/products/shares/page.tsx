@@ -22,8 +22,8 @@ export default function SharesPage() {
     <ProductLayout
       title={t("sharesTitle")}
       description={t("sharesDescription")}
-      icon="📈"
-      color="from-[#5B31F5] to-[#7B57FF]"
+      iconKey="trendingUp"
+      productCategory="shares"
       instruments={instruments}
     />
   );

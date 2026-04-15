@@ -40,7 +40,7 @@ export default function MT5Page() {
                   <span>📥</span>
                   <span>{t("downloadForWindows")}</span>
                 </button>
-                <Link href="/webtrader" className="btn-secondary flex items-center gap-2">
+                <Link href="/platforms/webtrader" className="btn-secondary flex items-center gap-2">
                   <span>🌐</span>
                   <span>{t("launchWebTrader")}</span>
                 </Link>
@@ -69,7 +69,7 @@ export default function MT5Page() {
               
               <div className="absolute -bottom-4 -right-4 glass-card rounded-xl p-4 animate-bounce" style={{ animationDuration: "3s" }}>
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center text-2xl">
+                  <div className="w-12 h-12 rounded-full product-bg-success flex items-center justify-center text-2xl">
                     ✓
                   </div>
                   <div>

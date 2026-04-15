@@ -16,5 +16,7 @@
   "profitAmount": "+$12,450.00",
   "profitReturn": "+24.5% return",
   "tradingPlatforms": "Trading Platforms",
-  "accountTypes": "Account Types"
+  "accountTypes": "Account Types",
+  "topPerformers": "Top Performers",
+  "activeTradersLabel": "Active Traders"
 }

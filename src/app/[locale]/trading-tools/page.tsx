@@ -21,7 +21,7 @@ export default function TradingToolsPage() {
         t("historicalData")
       ],
       link: "https://www.forexfactory.com",
-      color: "from-primary to-primary",
+      bgClass: "product-bg-forex",
     },
     {
       id: "signals",
@@ -35,7 +35,7 @@ export default function TradingToolsPage() {
         t("riskManagement")
       ],
       link: "/trading-tools/signals",
-      color: "from-green-500 to-emerald-500",
+      bgClass: "product-bg-commodities",
     },
     {
       id: "news",
@@ -49,7 +49,7 @@ export default function TradingToolsPage() {
         t("customAlerts")
       ],
       link: "/trading-tools/news",
-      color: "from-purple-500 to-pink-500",
+      bgClass: "product-bg-indices",
     },
     {
       id: "analysis",
@@ -63,7 +63,7 @@ export default function TradingToolsPage() {
         t("customIndicatorsLabel")
       ],
       link: "/trading-tools/analysis",
-      color: "from-amber-500 to-orange-500",
+      bgClass: "product-bg-metals",
     },
   ];
 
@@ -88,7 +88,7 @@ export default function TradingToolsPage() {
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           {tools.map((tool) => (
             <div key={tool.id} className="glass-card rounded-xl p-6 hover-lift">
-              <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center text-3xl mb-4`}>
+              <div className={`w-16 h-16 rounded-xl ${tool.bgClass} flex items-center justify-center text-3xl mb-4`}>
                 {tool.icon}
               </div>
               <h3 className="text-xl font-bold mb-2">{tool.title}</h3>

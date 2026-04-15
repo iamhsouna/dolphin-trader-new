@@ -57,7 +57,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-12">
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="relative w-12 h-12">
+              <div className="relative w-20 h-20">
                 <Image
                   src="/logo.png"
                   alt={t("brandName")}

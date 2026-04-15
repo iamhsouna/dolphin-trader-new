@@ -20,8 +20,8 @@ export default function MetalsPage() {
     <ProductLayout
       title={t("metalsTitle")}
       description={t("metalsDescription")}
-      icon="🥇"
-      color="from-amber-500 to-yellow-500"
+      iconKey="gem"
+      productCategory="metals"
       instruments={instruments}
     />
   );

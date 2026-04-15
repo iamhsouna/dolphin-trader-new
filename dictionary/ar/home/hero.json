@@ -16,5 +16,7 @@
   "profitAmount": "+$12,450.00",
   "profitReturn": "+24.5% عائد",
   "tradingPlatforms": "منصات التداول",
-  "accountTypes": "أنواع الحسابات"
+  "accountTypes": "أنواع الحسابات",
+  "topPerformers": "أفضل المتداولين",
+  "activeTradersLabel": "متداولون نشطون"
 }

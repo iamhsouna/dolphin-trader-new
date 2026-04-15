@@ -6,7 +6,15 @@
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-card: var(--background-card);
   --color-foreground: var(--foreground);
+  --color-muted: var(--foreground-muted);
+  --color-subtle: var(--foreground-subtle);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-fg: var(--accent-foreground);
+  --color-negative: var(--negative);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -51,31 +59,35 @@
   --brand-purple-hover: #7B57FF;
   --brand-purple-active: #3A18C7;
 
-  --background: #FFFFFF;
-  --foreground: #1A1A2E;
-  --card: #F5F4FB;
-  --card-foreground: #1A1A2E;
-  --popover: #F5F4FB;
-  --popover-foreground: #1A1A2E;
-  --primary: #5B31F5;
-  --primary-foreground: #FFFFFF;
-  --secondary: #EEEDFE;
-  --secondary-foreground: #1A1A2E;
-  --muted: #EEEDFE;
-  --muted-foreground: #5A5A78;
-  --accent: #EEEDFE;
-  --accent-foreground: #1A1A2E;
-  --destructive: #E03050;
-  --border: #D4D2F0;
-  --input: #D4D2F0;
-  --ring: #5B31F5;
+  --background: #F0F7FF;
+  --background-secondary: #FFFFFF;
+  --background-card: #FFFFFF;
+  --foreground: #0A0E1A;
+  --foreground-muted: #2D3748;
+  --foreground-subtle: #718096;
+  --accent: #00A854;
+  --accent-hover: #007A3D;
+  --accent-foreground: #FFFFFF;
+  --accent-glow: rgba(0, 168, 84, 0.15);
+  --negative: #E53E3E;
+  --negative-foreground: #FFFFFF;
+  --border: #E2E8F0;
+  --border-subtle: #EDF2F7;
+  --navbar-bg: #FFFFFF;
+  --navbar-bg-rgb: 255, 255, 255;
+  --ticker-bg: #0A2540;
+  --ticker-up: #00A854;
+  --ticker-down: #E53E3E;
+  --card-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  --btn-primary-bg: linear-gradient(135deg, #00A854, #007A3D);
+  --btn-primary-text: #FFFFFF;
 
-  --signal-green: #0BA870;
-  --signal-red: #E03050;
+  --signal-green: #00A854;
+  --signal-red: #E53E3E;
   --signal-amber: #D4900A;
 
-  --chart-1: #0BA870;
-  --chart-2: #E03050;
+  --chart-1: #00A854;
+  --chart-2: #E53E3E;
   --chart-3: #5B31F5;
   --chart-4: #D4900A;
   --chart-5: #7B57FF;
@@ -96,34 +108,54 @@
   --right-panel-width: 280px;
   --content-padding: 24px;
   --transition-duration: 0.25s;
+
+  /* Product Category Colors - Professional Light Mode */
+  --product-forex: #4A3F8C;
+  --product-forex-muted: #4A3F8C20;
+  --product-metals: #8B7355;
+  --product-metals-muted: #8B735520;
+  --product-indices: #3D5A80;
+  --product-indices-muted: #3D5A8020;
+  --product-commodities: #4A6741;
+  --product-commodities-muted: #4A674120;
+  --product-crypto: #5C4B51;
+  --product-crypto-muted: #5C4B5120;
+  --product-shares: #3C4B6D;
+  --product-shares-muted: #3C4B6D20;
+  --product-success: #2E7D5A;
+  --product-success-muted: #2E7D5A20;
 }
 
 .dark {
-  --background: #0A0A14;
-  --foreground: #E0E0F0;
-  --card: #11112A;
-  --card-foreground: #E0E0F0;
-  --popover: #11112A;
-  --popover-foreground: #E0E0F0;
-  --primary: #5B31F5;
-  --primary-foreground: #FFFFFF;
-  --secondary: #1C1C3A;
-  --secondary-foreground: #E0E0F0;
-  --muted: #1C1C3A;
-  --muted-foreground: #A0A0B8;
-  --accent: #1C1C3A;
-  --accent-foreground: #E0E0F0;
-  --destructive: #FF4D6A;
-  --border: #3A3A5C;
-  --input: #3A3A5C;
-  --ring: #5B31F5;
+  --background: #0A0E1A;
+  --background-secondary: #0D1421;
+  --background-card: #111827;
+  --foreground: #F7FAFC;
+  --foreground-muted: #A0AEC0;
+  --foreground-subtle: #4A5568;
+  --accent: #00FF88;
+  --accent-hover: #00CC6A;
+  --accent-foreground: #0A0E1A;
+  --accent-glow: rgba(0, 255, 136, 0.2);
+  --negative: #FF3B5C;
+  --negative-foreground: #0A0E1A;
+  --border: #1E2D4E;
+  --border-subtle: #162036;
+  --navbar-bg: #080C16;
+  --navbar-bg-rgb: 8, 12, 22;
+  --ticker-bg: #080C16;
+  --ticker-up: #00FF88;
+  --ticker-down: #FF3B5C;
+  --card-shadow: 0 1px 12px rgba(0, 0, 0, 0.4);
+  --btn-primary-bg: linear-gradient(135deg, #00FF88, #00CC6A);
+  --btn-primary-text: #0A0E1A;
 
-  --signal-green: #00C896;
-  --signal-red: #FF4D6A;
+  --signal-green: #00FF88;
+  --signal-red: #FF3B5C;
   --signal-amber: #FFB547;
 
-  --chart-1: #00C896;
-  --chart-2: #FF4D6A;
+  --chart-1: #00FF88;
+  --chart-2: #FF3B5C;
   --chart-3: #5B31F5;
   --chart-4: #FFB547;
   --chart-5: #7B57FF;
@@ -144,6 +176,22 @@
   --right-panel-width: 280px;
   --content-padding: 24px;
   --transition-duration: 0.25s;
+
+  /* Product Category Colors - Professional Dark Mode */
+  --product-forex: #8B7FD4;
+  --product-forex-muted: #8B7FD430;
+  --product-metals: #C9A86C;
+  --product-metals-muted: #C9A86C30;
+  --product-indices: #7B9FC4;
+  --product-indices-muted: #7B9FC430;
+  --product-commodities: #7BA875;
+  --product-commodities-muted: #7BA87530;
+  --product-crypto: #A88B8F;
+  --product-crypto-muted: #A88B8F30;
+  --product-shares: #7B8FC4;
+  --product-shares-muted: #7B8FC430;
+  --product-success: #5DAA8A;
+  --product-success-muted: #5DAA8A30;
 }
 
 @layer base {
@@ -157,31 +205,33 @@
 
 @layer utilities {
   .glass {
-    background: color-mix(in srgb, var(--card) 70%, transparent);
+    background: color-mix(in srgb, var(--background-card) 70%, transparent);
     backdrop-filter: blur(12px);
     border: 1px solid var(--border);
   }
 
   .glass-card {
-    background: color-mix(in srgb, var(--card) 70%, transparent);
+    background: color-mix(in srgb, var(--background-card) 70%, transparent);
     backdrop-filter: blur(12px);
     border: 1px solid var(--border);
     border-radius: 1rem;
+    box-shadow: var(--card-shadow);
   }
 
   .btn-primary {
-    background: linear-gradient(135deg, var(--brand-purple) 0%, var(--brand-purple-active) 100%);
-    color: white;
+    background: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
     font-weight: 600;
     border-radius: 0.75rem;
     padding: 0.75rem 1.5rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px color-mix(in srgb, var(--brand-purple) 30%, transparent);
+    box-shadow: 0 4px 15px color-mix(in srgb, var(--accent) 30%, transparent);
+    border: none;
   }
 
   .btn-primary:hover {
-    background: linear-gradient(135deg, var(--brand-purple-hover) 0%, var(--brand-purple) 100%);
-    box-shadow: 0 6px 20px color-mix(in srgb, var(--brand-purple) 40%, transparent);
+    background-color: var(--accent-hover);
+    box-shadow: 0 6px 20px color-mix(in srgb, var(--accent) 40%, transparent);
     transform: translateY(-2px);
   }
 
@@ -288,6 +338,58 @@
   .animate-fade-in {
     animation: fade-in 0.3s ease-out forwards;
   }
+
+  /* Product Category Gradient Utilities - Subtle, Professional */
+  .product-gradient-forex {
+    background: var(--product-forex);
+    opacity: 0.15;
+  }
+
+  .product-gradient-metals {
+    background: var(--product-metals);
+    opacity: 0.15;
+  }
+
+  .product-gradient-indices {
+    background: var(--product-indices);
+    opacity: 0.15;
+  }
+
+  .product-gradient-commodities {
+    background: var(--product-commodities);
+    opacity: 0.15;
+  }
+
+  .product-gradient-crypto {
+    background: var(--product-crypto);
+    opacity: 0.15;
+  }
+
+  .product-gradient-shares {
+    background: var(--product-shares);
+    opacity: 0.15;
+  }
+
+  .product-gradient-success {
+    background: var(--product-success);
+    opacity: 0.15;
+  }
+
+  .product-text-forex { color: var(--product-forex); }
+  .product-text-metals { color: var(--product-metals); }
+  .product-text-indices { color: var(--product-indices); }
+  .product-text-commodities { color: var(--product-commodities); }
+  .product-text-crypto { color: var(--product-crypto); }
+  .product-text-shares { color: var(--product-shares); }
+  .product-text-success { color: var(--product-success); }
+
+  .product-bg-forex { background-color: var(--product-forex-muted); }
+  .product-bg-metals { background-color: var(--product-metals-muted); }
+  .product-bg-indices { background-color: var(--product-indices-muted); }
+  .product-bg-commodities { background-color: var(--product-commodities-muted); }
+  .product-bg-crypto { background-color: var(--product-crypto-muted); }
+  .product-bg-shares { background-color: var(--product-shares-muted); }
+  .product-bg-success { background-color: var(--product-success-muted); }
 }
 
 /* RTL Icon Flip - for directional icons like chevrons and arrows */
@@ -295,7 +397,7 @@
   transform: scaleX(-1);
 }
 
-/* Trading Layout Shell */
+/* Trading Layout Shell - RTL-aware using CSS Grid */
 .trading-layout {
   display: grid;
   grid-template-columns: var(--sidebar-width) 1fr var(--right-panel-width);
@@ -308,6 +410,7 @@
 }
 
 [dir="rtl"] .trading-layout {
+  grid-template-columns: var(--right-panel-width) 1fr var(--sidebar-width);
   grid-template-areas:
     "navbar navbar navbar"
     "rightpanel main sidebar";
@@ -316,6 +419,10 @@
 @media (max-width: 1024px) {
   .trading-layout {
     grid-template-columns: var(--sidebar-collapsed-width) 1fr var(--right-panel-width);
+  }
+
+  [dir="rtl"] .trading-layout {
+    grid-template-columns: var(--right-panel-width) 1fr var(--sidebar-collapsed-width);
   }
 }
 
@@ -592,28 +699,23 @@
   box-shadow: 0 4px 12px color-mix(in srgb, var(--brand-purple) 35%, transparent);
 }
 
-/* Trading Sidebar */
+/* Trading Sidebar - RTL-aware with logical properties */
 .trading-sidebar {
   grid-area: sidebar;
+  width: var(--sidebar-width);
+  height: calc(100vh - var(--navbar-height));
+  position: sticky;
+  top: var(--navbar-height);
   background: var(--sidebar);
   border-inline-end: 1px solid var(--sidebar-border);
   display: flex;
   flex-direction: column;
   transition: width var(--transition-duration) ease;
   overflow: hidden;
-  height: calc(100vh - var(--navbar-height));
-  position: sticky;
-  top: var(--navbar-height);
-  direction: ltr;
 }
 
 .trading-sidebar.is-collapsed {
   width: var(--sidebar-collapsed-width);
-}
-
-[dir="rtl"] .trading-sidebar {
-  border-inline-end: none;
-  border-inline-start: 1px solid var(--sidebar-border);
 }
 
 .sidebar-header {
@@ -621,7 +723,7 @@
   align-items: center;
   justify-content: flex-end;
   padding: 12px;
-  border-bottom: 1px solid var(--sidebar-border);
+  border-block-end: 1px solid var(--sidebar-border);
 }
 
 .sidebar-toggle {
@@ -726,7 +828,6 @@
   overflow-x: hidden;
   background: var(--background);
   min-height: calc(100vh - var(--navbar-height));
-  direction: ltr;
 }
 
 /* Right Panel - Watchlist */
@@ -741,7 +842,6 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  direction: ltr;
 }
 
 [dir="rtl"] .trading-rightpanel {
@@ -751,7 +851,7 @@
 
 .rightpanel-header {
   padding: 16px;
-  border-bottom: 1px solid var(--border);
+  border-block-end: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -808,6 +908,10 @@
   gap: 2px;
 }
 
+[dir="rtl"] .watchlist-item-right {
+  align-items: flex-start;
+}
+
 .watchlist-price {
   font-size: 0.875rem;
   font-weight: 600;
@@ -846,7 +950,6 @@
 
 .mobile-drawer {
   position: fixed;
-  top: 0;
   inset-block: 0;
   inset-inline-start: 0;
   width: var(--sidebar-width);
@@ -857,17 +960,16 @@
 }
 
 [dir="rtl"] .mobile-drawer {
-  transform: translateX(0);
   inset-inline-start: auto;
   inset-inline-end: 0;
 }
 
 .mobile-drawer.is-closed {
-  transform: translateX(calc(-100% * var(--dir-factor, 1)));
+  transform: translateX(-100%);
 }
 
 [dir="rtl"] .mobile-drawer.is-closed {
-  transform: translateX(calc(100% * var(--dir-factor, 1)));
+  transform: translateX(100%);
 }
 
 /* Dropdown Menus */
@@ -985,7 +1087,7 @@
   inset-inline-start: 0;
   inset-inline-end: 0;
   background: var(--background);
-  border-bottom: 1px solid var(--border);
+  border-block-end: 1px solid var(--border);
   padding: 16px;
   z-index: 49;
   opacity: 0;
@@ -1028,7 +1130,7 @@
 .mobile-nav-divider {
   height: 1px;
   background: var(--border);
-  margin: 8px 0;
+  margin-block: 8px;
 }
 
 .mobile-nav-actions {

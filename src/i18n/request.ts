@@ -45,6 +45,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     mt5: (await import("../../dictionary/ar/mt5.json")).default,
     mobile: (await import("../../dictionary/ar/mobile.json")).default,
     webtrader: (await import("../../dictionary/ar/webtrader.json")).default,
+    trading: (await import("../../dictionary/ar/trading.json")).default,
   } : {
     metadata: (await import("../../dictionary/en/metadata.json")).default,
     navigation: (await import("../../dictionary/en/navigation.json")).default,
@@ -82,6 +83,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     mt5: (await import("../../dictionary/en/mt5.json")).default,
     mobile: (await import("../../dictionary/en/mobile.json")).default,
     webtrader: (await import("../../dictionary/en/webtrader.json")).default,
+    trading: (await import("../../dictionary/en/trading.json")).default,
   };
 
   return {

@@ -40,10 +40,10 @@ export default function DashboardPage() {
 
         <div className="grid md:grid-cols-4 gap-6 mb-8">
           {[
-            { label: t("totalBalance"), value: "$17,500.00", change: "+2.5%", icon: "💰", color: "from-[#5B31F5] to-[#7B57FF]" },
-            { label: t("equity"), value: "$17,700.00", change: "+3.2%", icon: "📊", color: "from-green-500 to-emerald-500" },
-            { label: t("availableMargin"), value: "$15,200.00", change: "-", icon: "📈", color: "from-purple-500 to-pink-500" },
-            { label: t("openPositions"), value: "3", change: "-", icon: "🎯", color: "from-amber-500 to-orange-500" },
+            { label: t("totalBalance"), value: "$17,500.00", change: "+2.5%", icon: "💰", bgClass: "product-bg-forex" },
+            { label: t("equity"), value: "$17,700.00", change: "+3.2%", icon: "📊", bgClass: "product-bg-commodities" },
+            { label: t("availableMargin"), value: "$15,200.00", change: "-", icon: "📈", bgClass: "product-bg-indices" },
+            { label: t("openPositions"), value: "3", change: "-", icon: "🎯", bgClass: "product-bg-metals" },
           ].map((stat, i) => (
             <div key={i} className="glass-card rounded-xl p-6">
               <div className="flex items-center justify-between mb-4">
@@ -148,7 +148,7 @@ export default function DashboardPage() {
               <h2 className="text-xl font-bold mb-6">{t("quickActions")}</h2>
               <div className="space-y-3">
                 {[
-                  { icon: "📊", label: t("openNewTrade"), href: "/trading" },
+                  { icon: "📊", label: t("openNewTrade"), href: "/platforms/webtrader" },
                   { icon: "📈", label: t("copyTrading"), href: "/copy-trading" },
                   { icon: "💱", label: t("deposit"), href: "/deposit" },
                   { icon: "💸", label: t("withdraw"), href: "/withdraw" },

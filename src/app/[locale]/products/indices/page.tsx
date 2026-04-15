@@ -22,8 +22,8 @@ export default function IndicesPage() {
     <ProductLayout
       title={t("indicesTitle")}
       description={t("indicesDescription")}
-      icon="📊"
-      color="from-purple-500 to-pink-500"
+      iconKey="barChart"
+      productCategory="indices"
       instruments={instruments}
     />
   );
