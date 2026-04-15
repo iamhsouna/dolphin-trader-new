@@ -80,8 +80,8 @@ export default function Navigation() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/95 backdrop-blur-[12px] border-b border-border"
-      style={{ backgroundColor: `rgba(var(--navbar-bg-rgb), 0.85)` }}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-[var(--border)]"
+      style={{ backgroundColor: `var(--navbar-bg)` }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
@@ -115,7 +115,7 @@ export default function Navigation() {
                       </button>
                       {openDropdown === item.key && (
                         <div 
-                          className="absolute top-full left-0 mt-2 w-56 bg-card/95 backdrop-blur-md border border-border rounded-xl shadow-xl py-2 animate-fade-in z-50"
+                          className="absolute top-full left-0 mt-2 w-56 bg-[var(--background-card)] border border-[var(--border)] rounded-xl shadow-xl py-2 animate-fade-in z-50"
                           onMouseEnter={() => handleMouseEnter(item.key)}
                           onMouseLeave={handleMouseLeave}
                         >
@@ -171,7 +171,7 @@ export default function Navigation() {
       </div>
 
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-background/98 backdrop-blur-md border-t border-border animate-fade-in">
+        <div className="lg:hidden border-t border-[var(--border)] animate-fade-in" style={{ backgroundColor: `var(--navbar-bg)` }}>
           <div className="px-4 py-4 space-y-2">
             {navItems.map((item) => (
               <div key={item.key}>
